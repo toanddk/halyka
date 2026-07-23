@@ -92,10 +92,33 @@ button:active{
     font-size:14px;
 
 }
-#gameScreen{
+#mathScreen{
     display: none;
 }
 
 #questionScreen{
     display: none;
+}
+
+#vietnameseScreen{
+    display: none;
+}
+#vietnameseTryreadScreen{
+    display: none;
+}
+
+.tryread-box {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 28px;
+    line-height: 1.8;
+}
+
+.tryread-box p {
+    margin: 10px 0;
+    font-weight: bold;
 }

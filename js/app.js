@@ -1,21 +1,31 @@
-const KidMathBtn = document.getElementById("KidMathBtn");
-const KyWordBtn = document.getElementById("KyWordBtn");
+const MathBtn = document.getElementById("MathBtn");
+const WordBtn = document.getElementById("WordBtn");
 const EngLishBtn = document.getElementById("EngLishBtn");
 
 const menuScreen = document.getElementById("menuScreen");
-const gameScreen = document.getElementById("gameScreen");
-const backBtn = document.getElementById("backBtn");
+const mathScreen = document.getElementById("mathScreen");
+const vietnameseScreen = document.getElementById("vietnameseScreen");
+const tryreadContent = document.getElementById("tryreadContent");
+
+const backMathBtn = document.getElementById("backMathBtn");
+const backVietnameseBtn = document.getElementById("backVietnameseBtn");
 const phepcongBtn = document.getElementById("phepcongBtn");
+const vietnameseReadBtn = document.getElementById("vietnameseReadBtn");
+
 const questionScreen = document.getElementById("questionScreen");
 const answerBtn = document.querySelectorAll(".answerBtn");
 const exitBtn = document.getElementById("exitBtn");
+const exitTryreadBtn = document.getElementById("exitTryreadBtn");
+
 const questionText = document.getElementById("questionText");
 const resultText = document.getElementById("resultText");
 const nextBtn = document.getElementById("nextBtn");
 
 let currentQuestion;
 let correctAnswer;
-const questions = [
+let currentTryreadIndex = 0;
+
+const mathquestions = [
     { a: 1, b: 2 },
     { a: 2, b: 3 },
     { a: 4, b: 1 },
@@ -24,53 +34,100 @@ const questions = [
     { a: 7, b: 1 }
 ];
 
+const vietnameseTryread = [
+    { a:"Ăn", b:"Ăn Cơm", c:"Bé ăn cơm", d:"Bé ăn cơm cá" },
+    { a:"Uống", b:"Uống nước", c:"Bé uống nước", d:"Bé uống nước cam" },
+    { a:"Học", b:"Học bài", c:"Bé Học bài", d:"Bé Học bài chăm chỉ" },
+    { a:"Đi", b:"Đi học", c:"Bé đi học", d:"Bé đi học ngoan" }
+];
+
 function showScreen(screen) {
 
     menuScreen.style.display = "none";
-    gameScreen.style.display = "none";
+    mathScreen.style.display = "none";
     questionScreen.style.display = "none";
+    vietnameseScreen.style.display = "none";
+    vietnameseTryreadScreen.style.display = "none";
 
     if (screen == "menu") {
         menuScreen.style.display = "block";
     }
 
-    if (screen == "game") {
-        gameScreen.style.display = "block";
+    if (screen == "math") {
+        mathScreen.style.display = "block";
     }
 
     if (screen == "question") {
         questionScreen.style.display = "block";
     }
+
+    if (screen == "vietnamese") {
+        vietnameseScreen.style.display = "block";
+    }
+
+    if (screen == "vietnameseTryread") {
+        vietnameseTryreadScreen.style.display = "block";
+    }
 }
 
-KidMathBtn.addEventListener("click", function () {
+MathBtn.addEventListener("click", function () {
 
-    showScreen("game");
+    showScreen("math");
 });
-backBtn.addEventListener("click", function () {
+backMathBtn.addEventListener("click", function () {
+    showScreen("menu");
+});
+backVietnameseBtn.addEventListener("click", function () {
 
     showScreen("menu");
 });
 phepcongBtn.addEventListener("click", function () {
-    resultText.textContent = "";
-    showQuestion();
-    showScreen("question");
-    showAnswers(correctAnswer);
+    startMath();
+});
+
+vietnameseReadBtn.addEventListener("click", function () {
+    currentTryreadIndex = 0;
+    showVietnameseTryread();
+    showScreen("vietnameseTryread");
 });
 
 exitBtn.addEventListener("click", function () {
 
-    showScreen("game");
+    showScreen("math");
 });
 
-function showQuestion() {
-    let index = Math.floor(Math.random() * questions.length);
-        currentQuestion = questions[index];
+exitTryreadBtn.addEventListener("click", function () {
+
+    showScreen("vietnamese");
+});
+
+VietnameseBtn.addEventListener("click", function () {
+
+    showScreen("vietnamese");
+});
+
+function showMathQuestion() {
+    let index = Math.floor(Math.random() * mathquestions.length);
+        currentQuestion = mathquestions[index];
         questionText.textContent= `${currentQuestion.a} + ${currentQuestion.b}=?`;
 
     correctAnswer = currentQuestion.a + currentQuestion.b;
-    //showAnswers();
 }
+
+function showVietnameseTryread() {
+    tryreadContent.innerHTML = "";  
+
+    let item = vietnameseTryread[currentTryreadIndex];
+
+    tryreadContent.innerHTML = `
+        <p>${item.a}</p>
+        <p>${item.b}</p>
+        <p>${item.c}</p>
+        <p>${item.d}</p>
+    `;
+}
+
+
 
 function showAnswers(correctAnswer) {
     let answers = [];
@@ -108,7 +165,37 @@ function checkAnswer(selected) {
 }
 
 nextBtn.addEventListener("click", function () {
-    showQuestion();               // tạo câu hỏi mới
+    showMathQuestion();               // tạo câu hỏi mới
     showAnswers(correctAnswer);   // tạo đáp án mới
     resultText.textContent = "";  // xóa kết quả cũ
+});
+
+function startMath() {
+    resultText.textContent = "";
+    showMathQuestion();
+    showScreen("question");
+    showAnswers(correctAnswer);
+}
+
+function startVietnamese() {
+    resultText.textContent = "";
+    showVietnameseTryread();
+    //showScreen("question");
+    //showAnswers(correctAnswer);
+}
+
+vietnameseTryread.forEach(item => {
+    console.log(item.a);
+    console.log(item.b);
+    console.log(item.c);
+    console.log(item.d);
+});
+
+nextTryreadBtn.addEventListener("click", function () {
+    currentTryreadIndex = Math.floor(Math.random() * vietnameseTryread.length);
+    if (currentTryreadIndex >= vietnameseTryread.length) {
+        currentTryreadIndex = 0;   // quay lại từ đầu nếu hết câu
+    }
+
+    showVietnameseTryread();
 });
