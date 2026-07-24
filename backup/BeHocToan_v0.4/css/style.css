@@ -92,56 +92,10 @@ button:active{
     font-size:14px;
 
 }
-#mathScreen{
+#gameScreen{
     display: none;
 }
 
 #questionScreen{
     display: none;
-}
-
-#vietnameseScreen{
-    display: none;
-}
-#vietnameseTryreadScreen{
-    display: none;
-}
-
-.tryread-box {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #ccc;
-    font-size: 28px;
-    line-height: 1.8;
-}
-
-.tryread-box p {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.read-line {
-    font-size: 32px;
-    padding: 14px 20px;
-    margin: 12px 0;
-    background: #FDF6E3;        /* nền kem dịu */
-    border-radius: 14px;
-    border: 2px solid #E0DCC8;  /* viền nhẹ */
-    color: #333333;             /* chữ xám đậm */
-    cursor: pointer;
-    transition: 0.25s;
-    text-align: center;
-}
-
-.read-line:hover {
-    background: #E6F0FF;        /* xanh nhạt khi chạm */
-    border-color: #A7C8FF;
-}
-
-.read-line:active {
-    transform: scale(0.97);
-    background: #D9E9FF;
 }

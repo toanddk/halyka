@@ -1,3 +1,6 @@
+speechSynthesis.onvoiceschanged = () => {};
+
+
 const MathBtn = document.getElementById("MathBtn");
 const WordBtn = document.getElementById("WordBtn");
 const EngLishBtn = document.getElementById("EngLishBtn");
@@ -35,11 +38,51 @@ const mathquestions = [
 ];
 
 const vietnameseTryread = [
-    { a:"Ăn", b:"Ăn Cơm", c:"Bé ăn cơm", d:"Bé ăn cơm cá" },
-    { a:"Uống", b:"Uống nước", c:"Bé uống nước", d:"Bé uống nước cam" },
-    { a:"Học", b:"Học bài", c:"Bé Học bài", d:"Bé Học bài chăm chỉ" },
-    { a:"Đi", b:"Đi học", c:"Bé đi học", d:"Bé đi học ngoan" }
+    { 
+        textA: "Ăn", 
+        audioA: "an",
+        textB: "Ăn cơm", 
+        audioB: "an-com",
+        textC: "Bé ăn cơm", 
+        audioC: "be-an-com",
+        textD: "Bé ăn cơm cá", 
+        audioD: "be-an-com-ca"
+    },
+
+    { 
+        textA: "Uống", 
+        audioA: "uong",
+        textB: "Uống nước", 
+        audioB: "uong-nuoc",
+        textC: "Bé uống nước", 
+        audioC: "be-uong-nuoc",
+        textD: "Bé uống nước cam", 
+        audioD: "be-uong-nuoc-cam"
+    },
+
+    { 
+        textA: "Học", 
+        audioA: "hoc",
+        textB: "Học bài", 
+        audioB: "hoc-bai",
+        textC: "Bé học bài", 
+        audioC: "be-hoc-bai",
+        textD: "Bé học bài chăm chỉ", 
+        audioD: "be-hoc-bai-cham-chi"
+    },
+
+    { 
+        textA: "Đi", 
+        audioA: "di",
+        textB: "Đi học", 
+        audioB: "di-hoc",
+        textC: "Bé đi học", 
+        audioC: "be-di-hoc",
+        textD: "Bé đi học ngoan", 
+        audioD: "be-di-hoc-ngoan"
+    }
 ];
+
 
 function showScreen(screen) {
 
@@ -115,17 +158,19 @@ function showMathQuestion() {
 }
 
 function showVietnameseTryread() {
-    tryreadContent.innerHTML = "";  
+    tryreadContent.innerHTML = "";
 
     let item = vietnameseTryread[currentTryreadIndex];
 
     tryreadContent.innerHTML = `
-        <p>${item.a}</p>
-        <p>${item.b}</p>
-        <p>${item.c}</p>
-        <p>${item.d}</p>
+        <p class="read-line" onclick="speakText('${item.audioA}')">${item.textA}</p>
+        <p class="read-line" onclick="speakText('${item.audioB}')">${item.textB}</p>
+        <p class="read-line" onclick="speakText('${item.audioC}')">${item.textC}</p>
+        <p class="read-line" onclick="speakText('${item.audioD}')">${item.textD}</p>
     `;
 }
+
+
 
 
 
@@ -199,3 +244,10 @@ nextTryreadBtn.addEventListener("click", function () {
 
     showVietnameseTryread();
 });
+
+function speakText(name) {
+    const audio = new Audio(`audio/${name}.mp3`);
+    audio.play();
+}
+
+
