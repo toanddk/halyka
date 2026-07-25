@@ -168,8 +168,20 @@ function showVietnameseTryread() {
         <p class="read-line" onclick="speakText('${item.audioC}')">${item.textC}</p>
         <p class="read-line" onclick="speakText('${item.audioD}')">${item.textD}</p>
     `;
+    autoResizeText();
 }
 
+function autoResizeText() {
+    document.querySelectorAll(".read-line").forEach(line => {
+        let fontSize = 32;
+        line.style.fontSize = fontSize + "px";
+
+        while (line.scrollHeight > line.clientHeight && fontSize > 18) {
+            fontSize -= 2;
+            line.style.fontSize = fontSize + "px";
+        }
+    });
+}
 
 
 
@@ -250,4 +262,14 @@ function speakText(name) {
     audio.play();
 }
 
+function autoResizeText() {
+    document.querySelectorAll(".read-line").forEach(line => {
+        let maxWidth = line.offsetWidth;
+        let fontSize = 32;
 
+        while (line.scrollHeight > line.clientHeight && fontSize > 18) {
+            fontSize -= 2;
+            line.style.fontSize = fontSize + "px";
+        }
+    });
+}
