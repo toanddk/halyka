@@ -25,7 +25,7 @@ function speakText(name) {
 }
 
 nextTryreadBtn.addEventListener("click", function () {
-    currentTryreadIndex = Math.floor(Math.random() * vietnameseTryread.length);
+    currentTryreadIndex++;
 
     if (currentTryreadIndex >= vietnameseTryread.length) {
         currentTryreadIndex = 0;

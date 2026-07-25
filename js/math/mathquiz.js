@@ -30,9 +30,11 @@ function showAnswers(correctAnswer) {
 
 function checkAnswer(selected) {
     if (selected === correctAnswer) {
+        speakText("chinh-xac");
         resultText.textContent = "🎉 Đúng rồi!";
         resultText.style.color = "green";
     } else {
+        speakText("thu-lai-nhe");
         resultText.textContent = "❌ Sai rồi!";
         resultText.style.color = "red";
     }
