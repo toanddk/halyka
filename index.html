@@ -45,7 +45,7 @@
     <div id="vietnameseScreen">
         <h2>Chọn bài hoc</h2>
         <button id="vietnameseReadBtn"> Tập đọc</button>
-
+        <button id="vietnamesequizBtn">Luyện từ</button>
         <button id="backVietnameseBtn">🔙Quay lại</button>
     </div>
 
@@ -78,10 +78,20 @@
     <h2>Tập đọc</h2>
 
     <div id="tryreadContent" class="tryread-box"></div>
-
     <button id="nextTryreadBtn">➡ Câu tiếp theo</button>
     <button id="exitTryreadBtn">🔙 Thoát</button>
 </div>
+<!-- Màn hình vietnamesequiz -->
+<div id="vn-quiz" style="display:none;">
+    <div id="vn-img" class="vn-icon"></div>
+    <div id="vn-answers"></div>
+
+    <h2 id="vn-result"></h2>   <!-- ← thêm dòng này -->
+
+    <button id="vn-nextBtn">➡ Câu tiếp theo</button>
+    <button id="vn-exitBtn">🔙 Thoát</button>
+</div>
+
     <script src="js/app.js"></script>
 
     <script src="js/math/mathdata.js"></script>
@@ -89,5 +99,7 @@
 
     <script src="js/vietnamese/vietnamesedata.js"></script>
     <script src="js/vietnamese/read.js"></script>
+    <script src="js/vietnamese/vietnamesequiz.js"></script>
+
 </body>
 </html>

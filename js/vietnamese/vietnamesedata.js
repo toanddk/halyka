@@ -47,3 +47,110 @@ const vietnameseTryread = [
         audioD: "be-di-hoc-ngoan"
     }
 ];
+
+const vietnamesequizdata = [
+    {
+        img: "🐶",
+        answers: [
+            { text: "chó", sound: "audio/con-cho.mp3" },
+            { text: "mèo", sound: "audio/con-meo.mp3" },
+            { text: "vịt", sound: "audio/con-vit.mp3" }
+        ],
+        correct: 0
+    },
+
+    {
+        img: "🐱",
+        answers: [
+            { text: "mèo", sound: "audio/con-meo.mp3" },
+            { text: "chó", sound: "audio/con-cho.mp3" },
+            { text: "gà", sound: "audio/con-ga.mp3" }
+        ],
+        correct: 0
+    },
+
+    {
+        img: "🐔",
+        answers: [
+            { text: "chó", sound: "audio/con-cho.mp3" },
+            { text: "gà", sound: "audio/con-ga.mp3" },
+            { text: "vịt", sound: "audio/con-vit.mp3" }
+        ],
+        correct: 1
+    },
+        {
+        img: "🦆",
+        answers: [
+            { text: "chó", sound: "audio/con-cho.mp3" },
+            { text: "gà", sound: "audio/con-ga.mp3" },
+            { text: "vịt", sound: "audio/con-vit.mp3" }
+        ],
+        correct: 2
+    },
+    {
+    img: "🐷",
+    answers: [
+        { text: "heo", sound: "audio/con-heo.mp3" },
+        { text: "chó", sound: "audio/con-cho.mp3" },
+        { text: "mèo", sound: "audio/con-meo.mp3" }
+    ],
+    correct: 0
+},
+{
+    img: "🐮",
+    answers: [
+        { text: "bò", sound: "audio/con-bo.mp3" },
+        { text: "gà", sound: "audio/con-ga.mp3" },
+        { text: "vịt", sound: "audio/con-vit.mp3" }
+    ],
+    correct: 0
+},
+{
+    img: "🐰",
+    answers: [
+        { text: "thỏ", sound: "audio/con-tho.mp3" },
+        { text: "mèo", sound: "audio/con-meo.mp3" },
+        { text: "chó", sound: "audio/con-cho.mp3" }
+    ],
+    correct: 0
+},
+{
+    img: "🐘",
+    answers: [
+        { text: "voi", sound: "audio/con-voi.mp3" },
+        { text: "heo", sound: "audio/con-heo.mp3" },
+        { text: "bò", sound: "audio/con-bo.mp3" }
+    ],
+    correct: 0
+},
+{
+    img: "🐼",
+    answers: [
+        { text: "gấu", sound: "audio/con-gau.mp3" },
+        { text: "mèo", sound: "audio/con-meo.mp3" },
+        { text: "chó", sound: "audio/con-cho.mp3" }
+    ],
+    correct: 0
+},
+{
+    img: "🐯",
+    answers: [
+        { text: "hổ", sound: "audio/con-ho.mp3" },
+        { text: "gà", sound: "audio/con-ga.mp3" },
+        { text: "vịt", sound: "audio/con-vit.mp3" }
+    ],
+    correct: 0
+},
+{
+    img: "🐧",
+    answers: [
+        { text: "chim cánh cụt", sound: "audio/con-chim-canh-cut.mp3" },
+        { text: "vịt", sound: "audio/con-vit.mp3" },
+        { text: "gà", sound: "audio/con-ga.mp3" }
+    ],
+    correct: 0
+}
+
+
+];
+

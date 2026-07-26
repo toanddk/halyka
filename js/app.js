@@ -1,4 +1,4 @@
-speechSynthesis.onvoiceschanged = () => {};
+//speechSynthesis.onvoiceschanged = () => {};
 
 const MathBtn = document.getElementById("MathBtn");
 const WordBtn = document.getElementById("WordBtn");
@@ -13,6 +13,7 @@ const backMathBtn = document.getElementById("backMathBtn");
 const backVietnameseBtn = document.getElementById("backVietnameseBtn");
 const phepcongBtn = document.getElementById("phepcongBtn");
 const vietnameseReadBtn = document.getElementById("vietnameseReadBtn");
+const vietnamesequizBtn = document.getElementById("vietnamesequizBtn");
 
 const questionScreen = document.getElementById("questionScreen");
 const answerBtn = document.querySelectorAll(".answerBtn");
@@ -119,4 +120,36 @@ function autoResizeText() {
             line.style.fontSize = fontSize + "px";
         }
     });
+};
+
+document.getElementById("vietnamesequizBtn").onclick = () => {
+    document.getElementById("menuScreen").style.display = "none";
+    document.getElementById("vietnameseScreen").style.display = "none";
+    document.getElementById("vn-quiz").style.display = "block";
+
+    vnstartquiz(); // gọi hàm bắt đầu quiz
+};
+
+// Nút câu tiếp theo
+document.getElementById("vn-nextBtn").onclick = () => {
+    vnindex++;
+
+    const result = document.getElementById("vn-result");
+    result.innerText = "";   // ← xóa kết quả cũ
+
+    if (vnindex < vietnamesequizdata.length) {
+        vnshowquestion();
+    } else {
+        vnfinishquiz();
+    }
 }
+
+// Nút thoát quiz
+document.getElementById("vn-exitBtn").onclick = () => {
+    document.getElementById("vn-result").innerText = "";
+    document.getElementById("vn-quiz").style.display = "none";
+    document.getElementById("vietnameseScreen").style.display = "block";
+};
+
+
+
