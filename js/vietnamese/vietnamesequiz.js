@@ -7,6 +7,10 @@ function vnshowquestion() {
     vnfirstTry = true;
     const q = vietnamesequizdata[vnindex];
 
+    //hien so cau
+    const progress = document.getElementById("vn-progress");
+    progress.innerText = `${vnindex + 1}/${vietnamesequizdata.length}`;
+
     const imgbox = document.getElementById("vn-img");
     imgbox.innerText = q.img;
 
@@ -42,18 +46,17 @@ function vncheckanswer(i) {
 
     result.classList.remove("correct-bounce", "wrong-shake");
 
-    // Kiểm tra đúng/sai theo vị trí đã shuffle
     const isCorrect = (i === q.shuffledCorrectIndex);
+
+    // ⭐ HIỆU ỨNG RUNG — LUÔN CHẠY
+    balloons[i].classList.remove("balloon-shake"); // reset nếu có
+    void balloons[i].offsetWidth;                  // trick để restart animation
+    balloons[i].classList.add("balloon-shake");
 
     if (isCorrect) {
 
-        // Bong bóng nổ đúng vị trí
-        balloons[i].classList.add("balloon-pop");
-
-        // Chỉ cộng điểm nếu đây là lần chọn đầu tiên
-        if (vnfirstTry) {
-            vnscore++;
-        }
+        // ⭐ ĐIỂM CHỈ TÍNH LẦN ĐẦU
+        if (vnfirstTry) vnscore++;
 
         result.innerText = "🎉 Chính xác!";
         result.style.color = "green";
@@ -61,19 +64,19 @@ function vncheckanswer(i) {
 
     } else {
 
-        // Nếu sai lần đầu → tăng số sai
-        if (vnfirstTry) {
-            vnwrong++;
-        }
+        // ⭐ SAI LẦN ĐẦU → TÍNH SAI
+        if (vnfirstTry) vnwrong++;
 
         result.innerText = "❌ Sai rồi!";
         result.style.color = "red";
         result.classList.add("wrong-shake");
     }
 
-    // Sau lần đầu tiên → không tính điểm nữa
+    // Sau lần đầu → không tính điểm nữa
     vnfirstTry = false;
 }
+
+
 
 
 function vnfinishquiz() {

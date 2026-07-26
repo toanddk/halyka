@@ -63,14 +63,9 @@
         </div>
         <!-- Kết quả đúng/sai -->
         <h2 id="resultText"></h2>
-        <!-- Sang câu tiếp theo -->
-        <button id="nextBtn">
-            ➡ Câu tiếp theo
-        </button>
-        <!-- Thoát khỏi bài -->
-        <button id="exitBtn">
-            🔙 Thoát
-        </button>
+        <button id="nextBtn" class="nextBtn">➡ Câu tiếp theo</button>
+        <button id="exitBtn" class="exitBtn">🔙 Thoát</button>
+
 </div>
 
 <!-- Màn hình tập đọc -->
@@ -78,18 +73,22 @@
     <h2>Tập đọc</h2>
 
     <div id="tryreadContent" class="tryread-box"></div>
-    <button id="nextTryreadBtn">➡ Câu tiếp theo</button>
-    <button id="exitTryreadBtn">🔙 Thoát</button>
+    <<button id="nextTryreadBtn" class="nextBtn">➡ Câu tiếp theo</button>
+    <button id="exitTryreadBtn" class="exitBtn">🔙 Thoát</button>
+
 </div>
 <!-- Màn hình vietnamesequiz -->
 <div id="vn-quiz" style="display:none;">
     <div id="vn-img" class="vn-icon"></div>
     <div id="vn-answers"></div>
 
-    <h2 id="vn-result"></h2>   <!-- ← thêm dòng này -->
+    <h2 id="vn-result"></h2>
+    <div id="vn-progress"></div>
 
-    <button id="vn-nextBtn">➡ Câu tiếp theo</button>
-    <button id="vn-exitBtn">🔙 Thoát</button>
+
+    <button id="vn-nextBtn" class="nextBtn">➡ Câu tiếp theo</button>
+    <button id="vn-exitBtn" class="exitBtn">🔙 Thoát</button>
+
 </div>
 
     <script src="js/app.js"></script>
