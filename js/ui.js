@@ -122,8 +122,11 @@ function levelScreen() {
         () => selectLevel(2)
     );
 
+    const nav = document.getElementById("levelNavigation");
+    nav.innerHTML = "";
     createBackButton(
-        "levelList",
+        //"levelList",
+        "levelNavigation",
         () => showTopScreen()
     );
 
@@ -135,62 +138,53 @@ function levelScreen() {
 // Lesson Screen
 // =================================================
 
-function showLessonScreen() {
+function showLessonScreen(lessons) {
 
+    console.log("show lesson");
     showScreen("lessonScreen");
 
-    lessonScreen();
+    lessonScreen(lessons);
 
 }
 
-
-function lessonScreen() {
+function lessonScreen(lessons) {
 
     const list = document.getElementById("lessonList");
 
     list.innerHTML = "";
 
 
-    if(currentSubject === "math") {
+    if (!lessons) {
 
-        createButton(
-            "lessonList",
-            "➕ Phép cộng",
-            () => selectLesson("addition")
-        );
+        console.log("Không có lessons");
 
-        createButton(
-            "lessonList",
-            "➖ Phép trừ",
-            () => selectLesson("subtraction")
-        );
+        return;
 
     }
 
 
-    if(currentSubject === "vietnamese") {
+    lessons.forEach(lesson => {
 
         createButton(
             "lessonList",
-            "📖 Tập đọc",
-            () => selectLesson("reading")
+            lesson.name,
+            () => selectLesson(lesson.id)
         );
 
-        createButton(
-            "lessonList",
-            "🐶 Động vật",
-            () => selectLesson("animals")
-        );
+    });
 
-        createButton(
-            "lessonList",
-            "🍎 Đồ vật",
-            () => selectLesson("objects")
-        );
 
-    }
+    const nav = document.getElementById("lessonNavigation");
+
+    nav.innerHTML = "";
+
+    createBackButton(
+        "lessonNavigation",
+        () => showLevelScreen()
+    );
 
 }
+
 // =================================================
 // Activity Screen
 // =================================================
@@ -216,6 +210,9 @@ function activityScreen() {
     // reading.js
     // listening.js
     // sẽ tạo nội dung ở đây
+    const nav = document.getElementById("activityNavigation");
+    nav.innerHTML = ""; // xóa nút cũ
+    createBackButton("activityNavigation",() => showLessonScreen());
 
 }
 

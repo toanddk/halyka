@@ -9,7 +9,6 @@ let currentSubject = null;
 let currentLevel = null;
 let currentLesson = null;
 
-
 // =====================================
 // Khởi động app
 // =====================================
@@ -53,6 +52,20 @@ function selectSubject(subject){
 // =====================================
 
 function selectLevel(level){
+    console.log("levellevel");
+    currentLevel = level;
+
+    const lessons = getLessonList(
+        currentSubject,
+        currentLevel
+    );
+
+    showLessonScreen(lessons);
+
+}
+
+/*
+function selectLevel(level){
 
     currentLevel = level;
 
@@ -63,7 +76,7 @@ function selectLevel(level){
     showLessonScreen();
 
 }
-
+*/
 
 
 // =====================================
@@ -128,3 +141,4 @@ function backToLesson(){
     showLessonScreen();
 
 }
+
