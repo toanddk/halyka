@@ -52,32 +52,12 @@ function selectSubject(subject){
 // =====================================
 
 function selectLevel(level){
-    console.log("levellevel");
-    currentLevel = level;
-
-    const lessons = getLessonList(
-        currentSubject,
-        currentLevel
-    );
-
-    showLessonScreen(lessons);
-
-}
-
-/*
-function selectLevel(level){
 
     currentLevel = level;
-
-    // reset bài học
-    currentLesson = null;
-
 
     showLessonScreen();
 
 }
-*/
-
 
 // =====================================
 // Chọn bài học
@@ -86,7 +66,7 @@ function selectLevel(level){
 function selectLesson(lesson){
 
     currentLesson = lesson;
-
+    resetQuiz();
 
     startLesson();
 
@@ -104,7 +84,27 @@ function startLesson(){
 
 }
 
+// =====================================
+// Lấy bài học hiện tại
+// =====================================
 
+function getCurrentLesson(){
+
+    const lessons = getLessonList(
+        currentSubject,
+        currentLevel
+    );
+
+
+    return lessons.find(
+        lesson => lesson.id === currentLesson
+    );
+
+}
+
+function getLessonData(){
+    return lessonData[currentLesson]?.[currentLevel]||[];
+}
 
 // =====================================
 // Quay lại
@@ -141,4 +141,3 @@ function backToLesson(){
     showLessonScreen();
 
 }
-

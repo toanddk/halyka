@@ -138,9 +138,8 @@ function levelScreen() {
 // Lesson Screen
 // =================================================
 
-function showLessonScreen(lessons) {
-
-    console.log("show lesson");
+function showLessonScreen() {
+    const lessons = getLessonList(currentSubject, currentLevel);
     showScreen("lessonScreen");
 
     lessonScreen(lessons);
@@ -193,26 +192,67 @@ function showActivityScreen() {
 
     showScreen("activityScreen");
 
-    activityScreen();
+    renderActivity();
 
 }
 
-
-function activityScreen() {
+function renderActivity(){
 
     const container =
         document.getElementById("activityContainer");
 
-    container.innerHTML = "";
+    const nav =
+        document.getElementById("activityNavigation");
 
-    // Sau này:
-    // quiz.js
-    // reading.js
-    // listening.js
-    // sẽ tạo nội dung ở đây
-    const nav = document.getElementById("activityNavigation");
-    nav.innerHTML = ""; // xóa nút cũ
-    createBackButton("activityNavigation",() => showLessonScreen());
+
+    // Xóa dữ liệu cũ
+    container.innerHTML = "";
+    nav.innerHTML = "";
+
+
+    // Tạo nút quay lại
+    createBackButton(
+        "activityNavigation",
+        () => {
+
+            currentLesson = null;
+
+            showLessonScreen();
+
+        }
+    );
+
+
+    const lesson = getCurrentLesson();
+
+    if(!lesson){
+        return;
+    }
+
+
+    const data = getLessonData();
+
+
+    switch(lesson.ui){
+
+        case "quiz":
+
+            quizUI(container, data);
+            break;
+
+
+        case "reading":
+
+            readingUI(container, data);
+            break;
+
+
+        case "listening":
+
+            listeningUI(container, data);
+            break;
+
+    }
 
 }
 
