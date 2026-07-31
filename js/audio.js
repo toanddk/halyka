@@ -1,7 +1,7 @@
 
 // js/audio.js
-const audioCorrect = new Audio("audio/chinh-xac.mp3");
-const audioWrong = new Audio("audio/thu-lai-nhe.mp3");
+const audioCorrect = new Audio("assets/audio/chinh-xac.mp3");
+const audioWrong = new Audio("assets/audio/thu-lai-nhe.mp3");
 
 function playCorrectSound(){
 
