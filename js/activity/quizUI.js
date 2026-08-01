@@ -1,128 +1,146 @@
-function quizUI(container, data){
+// quizUI.js
 
-    container.innerHTML = "";
-    renderQuestion(container,data);
+let quizIndex = 0;
+
+
+// =======================
+// Khởi động Quiz
+// =======================
+
+function quizUI(container, data, renderer){
+
+    quizIndex = 0;
+
+
+    renderQuiz(
+        container,
+        data,
+        renderer
+    );
 
 }
 
-function renderQuestion(container, data){
+
+
+// =======================
+// Hiển thị một câu
+// =======================
+
+function renderQuiz(container, data, renderer){
 
     container.innerHTML = "";
 
 
-    const questionData = data[currentQuestion];
-
-
     const question =
-        document.createElement("h3");
-
-    question.textContent =
-        "Câu " +
-        (currentQuestion + 1) +
-        ": " +
-        questionData.question;
-
-    container.appendChild(question);
+        data[quizIndex];
 
 
+    if(!question){
 
-    const answerBox =
-        document.createElement("div");
+        container.innerHTML =
+            "🎉 Hoàn thành bài học";
 
-    container.appendChild(answerBox);
+        quizIndex = 0;
 
-
-
-    const result =
-        document.createElement("p");
-
-    container.appendChild(result);
+        return;
+    }
 
 
+    // Renderer tự lo phần giao diện
 
-    questionData.answers.forEach(answer => {
+    renderer(
+        container,
+        question,
+        function(selectedAnswer){
 
-
-        const btn =
-            document.createElement("button");
-
-
-        btn.textContent = answer;
-
-
-        btn.onclick = function(){
-
-
-            const correct =
-                checkAnswer(
-                    answer,
-                    questionData.correct
-                );
+            checkQuizAnswer(
+                selectedAnswer,
+                question.correct
+            );
 
 
-            if(correct){
-                playCorrectSound();
+            createNextButton(
+                container,
+                data,
+                renderer
+            );
 
-                result.textContent =
-                    "🎉 Đúng rồi!";
+        }
+    );
 
-                score++;
-
-            }else{
-                playWrongSound();
-
-                result.textContent =
-                    "❌ Sai rồi!";
-
-            }
-
-
-            nextBtn.style.display = "block";
-
-        };
-
-
-        answerBox.appendChild(btn);
-
-    });
+}
 
 
 
-    const nextBtn =
+// =======================
+// Kiểm tra đáp án
+// =======================
+
+function checkQuizAnswer(selected, correct){
+
+
+    if(selected === correct){
+
+        playSound("chinh-xac.mp3");
+
+        console.log("Đúng");
+
+    }
+    else{
+
+        playSound("thu-lai-nhe.mp3");
+
+        console.log("Sai");
+
+    }
+
+}
+
+
+
+// =======================
+// Nút câu tiếp theo
+// =======================
+
+function createNextButton(
+    container,
+    data,
+    renderer
+){
+
+
+    if(container.querySelector(".nextBtn")){
+        return;
+    }
+
+
+    const btn =
         document.createElement("button");
 
 
-    nextBtn.textContent =
+    btn.className =
+        "nextBtn";
+
+
+    btn.textContent =
         "➡ Câu tiếp theo";
 
 
-    nextBtn.style.display =
-        "none";
+    btn.onclick = function(){
 
 
-    nextBtn.onclick = function(){
-
-        currentQuestion++;
+        quizIndex++;
 
 
-        if(currentQuestion < data.length){
-
-            renderQuestion(
-                container,
-                data
-            );
-
-        }else{
-
-            container.innerHTML =
-                "🎉 Hoàn thành! Điểm: "
-                + score;
-
-        }
+        renderQuiz(
+            container,
+            data,
+            renderer
+        );
 
     };
 
 
-    container.appendChild(nextBtn);
+    container.appendChild(btn);
 
 }

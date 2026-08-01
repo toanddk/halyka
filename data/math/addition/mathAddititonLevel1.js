@@ -9,7 +9,7 @@ const mathAddititonLevel1 = [
             "3"
         ],
 
-        correct: "3"
+        correct: 2
     },
 
 
@@ -22,7 +22,7 @@ const mathAddititonLevel1 = [
             "4"
         ],
 
-        correct: "5"
+        correct: 1
     },
     {
         question: "4 + 1 = ?",
@@ -33,7 +33,7 @@ const mathAddititonLevel1 = [
             "4"
         ],
 
-        correct: "5"
+        correct: 0
     },
     {
             question: "5 + 2 = ?",
@@ -44,7 +44,7 @@ const mathAddititonLevel1 = [
             "7"
         ],
 
-        correct: "7"
+        correct: 2
     },
     {
             question: "3 + 6 = ?",
@@ -55,7 +55,7 @@ const mathAddititonLevel1 = [
             "7"
         ],
 
-        correct: "9"
+        correct: 1
     },
     {
             question: "7 + 1 = ?",
@@ -66,7 +66,7 @@ const mathAddititonLevel1 = [
             "6"
         ],
 
-        correct: "8"
+        correct: 0
     }
 
 ];

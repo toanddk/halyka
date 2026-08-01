@@ -237,7 +237,7 @@ function renderActivity(){
 
         case "quiz":
 
-            quizUI(container, data);
+            quizUI(container, data, mathRenderer);
             break;
 
 
