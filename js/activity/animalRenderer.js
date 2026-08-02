@@ -56,12 +56,10 @@ function animalRenderer(
 
 
         btn.onclick = function(){
-
-            callback(
-                index,
-                btn
-            );
-
+            if(answer.sound){
+                playSound(answer.sound);
+            }
+            //callback(index,btn);
         };
 
 
