@@ -13,11 +13,11 @@ const vietnameseAnimalsLevel1 = [
     {
         img: "🐱",
         answers: [
-            { text: "mèo",sound: "vietnamese/animals/con-meo.mp3" },
             { text: "chó",sound: "vietnamese/animals/con-cho.mp3" },
+            { text: "mèo",sound: "vietnamese/animals/con-meo.mp3" },
             { text: "gà", sound: "vietnamese/animals/con-ga.mp3"  }
         ],
-        correct: 0
+        correct: 1
     },
 
     {
@@ -53,11 +53,11 @@ const vietnameseAnimalsLevel1 = [
     {
     img: "🐮",
     answers: [
-        { text: "bò", sound: "vietnamese/animals/con-bo.mp3" },
         { text: "gà", sound: "vietnamese/animals/con-ga.mp3" },
+        { text: "bò", sound: "vietnamese/animals/con-bo.mp3" },
         { text: "vịt", sound: "vietnamese/animals/con-vit.mp3" }
     ],
-    correct: 0
+    correct: 1
     },
 
     {
@@ -73,11 +73,11 @@ const vietnameseAnimalsLevel1 = [
     {
     img: "🐘",
     answers: [
-        { text: "voi", sound: "vietnamese/animals/con-voi.mp3" },
         { text: "heo", sound: "vietnamese/animals/con-heo.mp3" },
-        { text: "bò", sound: "vietnamese/animals/con-bo.mp3" }
+        { text: "bò", sound: "vietnamese/animals/con-bo.mp3" },
+        { text: "voi", sound: "vietnamese/animals/con-voi.mp3" }
     ],
-    correct: 0
+    correct: 2
     },
     {
     img: "🐼",
@@ -91,11 +91,11 @@ const vietnameseAnimalsLevel1 = [
     {
     img: "🐯",
     answers: [
-        { text: "hổ", sound: "vietnamese/animals/con-ho.mp3" },
         { text: "gà", sound: "vietnamese/animals/con-ga.mp3" },
+        { text: "hổ", sound: "vietnamese/animals/con-ho.mp3" },
         { text: "vịt", sound: "vietnamese/animals/con-vit.mp3" }
     ],
-    correct: 0
+    correct: 1
     },
     
     {

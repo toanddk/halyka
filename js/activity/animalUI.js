@@ -209,10 +209,7 @@ function checkAnimalAnswerUI(
 
 
         animalScore++;
-console.log(
-    "animalScore sau cộng:",
-    animalScore
-);
+
     }
     else{
 
