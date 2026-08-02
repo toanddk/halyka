@@ -1,21 +1,22 @@
-// js/activity/quizUI.js
+// js/activity/animalUI.js
 
-let quizIndex = 0;
-let quizScore = 0;
+let animalIndex = 0;
+let animalScore = 0;
 
 
 // =====================================
 // Khởi động Quiz
 // =====================================
 
-function quizUI(
+function animalUI(
     container,
     data,
     renderer
 ){
 
-    quizIndex = 0;
-    quizScore = 0;
+
+    animalIndex = 0;
+    animalScore = 0;
 
 
     const nextButton =
@@ -34,10 +35,10 @@ function quizUI(
 
         nextButton.onclick = function(){
 
-            quizIndex++;
+            animalIndex++;
 
 
-            renderQuiz(
+            renderAnimalQuiz(
                 container,
                 data,
                 renderer
@@ -47,7 +48,7 @@ function quizUI(
 
     }
 
-    renderQuiz(container,data,renderer);
+    renderAnimalQuiz(container,data,renderer);
 }
 
 
@@ -56,7 +57,13 @@ function quizUI(
 // Hiển thị câu hỏi
 // =====================================
 
-function renderQuiz(container,data,renderer){
+function renderAnimalQuiz(container,data,renderer){
+
+    const messageBox = document.getElementById("messageBox");
+    if(messageBox){
+        messageBox.style.display = "none";
+        messageBox.textContent = "";
+    }
 
     const nextButton =
         document.getElementById("nextButton");
@@ -66,7 +73,7 @@ function renderQuiz(container,data,renderer){
 
 
     const question =
-        data[quizIndex];
+        data[animalIndex];
 
 
     // =========================
@@ -85,7 +92,7 @@ function renderQuiz(container,data,renderer){
 
                 <h3>
                     Điểm:
-                    ${quizScore}/${data.length}
+                    ${animalScore}/${data.length}
                 </h3>
 
             </div>
@@ -124,7 +131,7 @@ function renderQuiz(container,data,renderer){
     if(progress){
 
         progress.textContent =
-            `Câu ${quizIndex + 1} / ${data.length}`;
+            `Câu ${animalIndex + 1} / ${data.length}`;
 
     }
 
@@ -137,7 +144,7 @@ function renderQuiz(container,data,renderer){
             selectedButton
         ){
 
-            checkAnswerUI(
+            checkAnimalAnswerUI(
                 container,
                 question,
                 selectedIndex,
@@ -153,50 +160,77 @@ function renderQuiz(container,data,renderer){
 // Kiểm tra đáp án
 // =====================================
 
-function checkAnswerUI(
+function checkAnimalAnswerUI(
     container,
     question,
     selectedIndex,
     selectedButton,
     nextButton
-
 ){
+    console.log("UI nhan:", selectedIndex,"Dung:", question.correct);
 
-    const buttons = container.querySelectorAll(".answerBox button");
+    const buttons =
+        container.querySelectorAll(
+            ".answer-balloon"
+        );
 
-    buttons.forEach(button => {
 
-        button.disabled = true;
+    const answer =
+        question.answers?.[selectedIndex];
+
+
+    // phát âm con vật đã chọn
+    if(answer && answer.sound){
+
+        playSound(
+            answer.sound
+        );
+
+    }
+
+
+    buttons.forEach(button=>{
+
+        button.style.pointerEvents =
+            "none";
 
     });
 
+
     if(selectedIndex === question.correct){
 
-        selectedButton.style.background = "green";
+        selectedButton.style.background =
+            "green";
 
-        playSound("system/chinh-xac.mp3");
-        quizScore++;
 
+        showMessage(
+            "✅ Chính xác!"
+        );
+
+
+        animalScore++;
+console.log(
+    "animalScore sau cộng:",
+    animalScore
+);
     }
     else{
 
-        selectedButton.style.background = "red";
+        selectedButton.style.background =
+            "red";
 
-        if(buttons[question.correct]){
 
-            buttons[question.correct].style.background = "green";
-
-        }
-
-        playSound("system/thu-lai-nhe.mp3");
+        showMessage(
+            "❌ Thử lại nhé!"
+        );
 
     }
 
-    // mở nút tiếp theo
 
     if(nextButton){
 
-        nextButton.disabled =false;
+        nextButton.disabled = false;
+        //nextButton.style.display = "block";
 
     }
 

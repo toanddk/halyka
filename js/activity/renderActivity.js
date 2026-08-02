@@ -11,12 +11,12 @@ function renderActivity(){
 
         case "addition":
 
-            quizUI(container, data, mathRenderer );
+            mathUI(container, data, mathRenderer );
             break;
 
         case "animals":
 
-            quizUI(container, data, animalRenderer);
+            animalUI(container, data, animalRenderer);
             break;
 
         case "reading":

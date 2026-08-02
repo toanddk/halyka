@@ -236,3 +236,21 @@ function resetActivityUI(){
     }
 
 }
+
+function showMessage(text){
+
+    const box =
+        document.getElementById(
+            "messageBox"
+        );
+
+
+    if(!box){
+        return;
+    }
+
+
+    box.textContent = text;
+
+    box.style.display = "block";
+}

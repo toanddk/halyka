@@ -59,7 +59,7 @@ function animalRenderer(
             if(answer.sound){
                 playSound(answer.sound);
             }
-            //callback(index,btn);
+            callback(index,btn);
         };
 
 
