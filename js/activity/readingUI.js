@@ -9,47 +9,86 @@ let currentReadingIndex = 0;
 
 function readingUI(container, data){
 
+    resetActivityUI();
+
     currentReadingIndex = 0;
 
-    renderReading(container, data);
+    const nextButton = document.getElementById("nextButton" );
+    
+    if(nextButton){
+
+        nextButton.onclick = function(){
+
+            currentReadingIndex++;
+            renderReading(container, data );
+        };
+
+    }
+
+    renderReading(container,data);
 
 }
 
-
-
 // =============================
-// Hiển thị từng bài đọc
+// Hiển thị bài đọc
 // =============================
 
 function renderReading(container, data){
 
     container.innerHTML = "";
+// hết bài đọc
 
+    if(currentReadingIndex >= data.length){
+
+        container.innerHTML = `
+
+            <div class="quizResult">
+
+                <h2> 🎉 Hoàn thành! </h2>
+            </div>
+        `;
+
+        const nextButton = document.getElementById("nextButton");
+
+        if(nextButton){
+
+            nextButton.style.display = "none";
+        }
+
+        const progress = document.getElementById("quizProgress");
+        
+        if(progress){progress.textContent = "";
+            
+        }
+
+        return;
+    }
 
     const lesson = data[currentReadingIndex];
+    const progress = document.getElementById("quizProgress");
+    
+    if(progress){
+        progress.textContent =
+         `Bài ${currentReadingIndex + 1} / ${data.length}`;
+        }
+
+    if(!lesson){
+
+        container.innerHTML = "<h2>🎉 Hoàn thành</h2>";
+        return;
+    }
 
 
     const title = document.createElement("h3");
 
-    title.textContent =
-        "Bài đọc " + 
-        (currentReadingIndex + 1);
+    title.textContent = "Bài đọc " + (currentReadingIndex + 1);
 
     container.appendChild(title);
 
-
-
-    // tạo các nút đọc
-
     lesson.words.forEach(word => {
 
-
-        const btn =
-            document.createElement("button");
-
-
+        const btn = document.createElement("button");
         btn.textContent = word.text;
-
 
         btn.onclick = function(){
 
@@ -57,47 +96,7 @@ function renderReading(container, data){
 
         };
 
-
         container.appendChild(btn);
-
-
     });
-
-
-
-    // nút tiếp theo
-
-    const nextBtn =
-        document.createElement("button");
-
-
-    nextBtn.textContent =
-        "➡ Tiếp theo";
-
-
-    nextBtn.onclick = function(){
-
-
-        currentReadingIndex++;
-
-
-        if(currentReadingIndex < data.length){
-
-            renderReading(
-                container,
-                data
-            );
-
-        }else{
-
-            container.innerHTML =
-                "🎉 Hoàn thành bài đọc!";
-
-        }
-
-    };
-
-
-    container.appendChild(nextBtn);
 
 }

@@ -192,67 +192,9 @@ function showActivityScreen() {
 
     showScreen("activityScreen");
 
+    const exitButton = document.getElementById("exitButton");
+    exitButton.onclick = exitActivity;
     renderActivity();
-
-}
-
-function renderActivity(){
-
-    const container =
-        document.getElementById("activityContainer");
-
-    const nav =
-        document.getElementById("activityNavigation");
-
-
-    // Xóa dữ liệu cũ
-    container.innerHTML = "";
-    nav.innerHTML = "";
-
-
-    // Tạo nút quay lại
-    createBackButton(
-        "activityNavigation",
-        () => {
-
-            currentLesson = null;
-
-            showLessonScreen();
-
-        }
-    );
-
-
-    const lesson = getCurrentLesson();
-
-    if(!lesson){
-        return;
-    }
-
-
-    const data = getLessonData();
-
-
-    switch(lesson.ui){
-
-        case "quiz":
-
-            quizUI(container, data, mathRenderer);
-            break;
-
-
-        case "reading":
-
-            readingUI(container, data);
-            break;
-
-
-        case "listening":
-
-            listeningUI(container, data);
-            break;
-
-    }
 
 }
 
@@ -273,4 +215,24 @@ function resultScreen(score) {
 
     document.getElementById("scoreText")
             .textContent = score;
+}
+
+function resetActivityUI(){
+
+    const progress =
+        document.getElementById("quizProgress");
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    if(progress){
+        progress.textContent = "";
+    }
+
+    if(nextButton){
+        nextButton.style.display = "block";
+        nextButton.disabled = false;
+        nextButton.onclick = null;
+    }
+
 }

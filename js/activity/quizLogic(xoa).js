@@ -1,6 +1,6 @@
 // js/activity/quizLogic.js
 
-
+/*
 function checkAnswer(answer, correct){
 
     if(answer === correct){
@@ -38,3 +38,4 @@ function resetQuiz(){
     score = 0;
 
 }
+*/

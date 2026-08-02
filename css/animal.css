@@ -1,0 +1,96 @@
+.animal-icon{
+
+    font-size:120px;
+
+    margin-top:20px;
+
+    margin-bottom:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.animal-answer-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+.answer-balloon{
+
+    width:80%;
+
+    max-width:300px;
+
+    padding:18px;
+
+    margin:12px;
+
+    background:#FFEB3B;
+
+    border-radius:50px;
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.15);
+
+
+    transition:.2s;
+
+}
+
+
+
+.answer-balloon:hover{
+
+    transform:
+        scale(1.08);
+
+}
+
+
+
+.answer-balloon:active{
+
+    transform:
+        scale(.95);
+
+}
+
+
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}

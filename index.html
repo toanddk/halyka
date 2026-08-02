@@ -7,6 +7,7 @@
     <title>Halyka</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animal.css">
 </head>
 
 <body>
@@ -69,18 +70,15 @@
 
         <h2 id="activityTitle"></h2>
 
-        <div id="activityContainer">
-            <!--
-                quiz.js
-                reading.js
-                listening.js
-                ...
-                sẽ tự sinh giao diện tại đây
-            -->
+        <div id="quizProgress"></div>
+        
+        <div id="activityContainer"></div>
+
+        <div id="activityControl">
+            <button id="nextButton" class="nextButton">Câu tiếp theo</button>
+                   
+            <button id="exitButton" class="exitButton"> Thoat </button>
         </div>
-
-        <div id="activityNavigation"></div>
-
     </div>
 
 
@@ -114,14 +112,16 @@
 <script src="data/vietnamese/reading/vietnameseReadingLevel1.js"></script>
 <script src="data/vietnamese/animals/vietnameseAnimalsLevel1.js"></script>
 <script src="data/math/addition/mathAddititonLevel1.js"></script>
+<script src="js/activity/animalRenderer.js"></script>
 <script src="js/data/lessonData.js"></script>
 <script src="js/activity/readingUI.js"></script>
 
 <script src="js/audio.js"></script>
-<script src="js/activity/quizLogic.js"></script>
+<!--<script src="js/activity/quizLogic.js"></script>-->
 <script src="js/activity/mathRenderer.js"></script>
 <script src="js/activity/quizUI.js"></script>
 
+<script src="js/activity/renderActivity.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/app.js"></script>
 

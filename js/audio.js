@@ -1,21 +1,5 @@
+// js/audio/audio.js
 
-// js/audio.js
-const audioCorrect = new Audio("assets/audio/chinh-xac.mp3");
-const audioWrong = new Audio("assets/audio/thu-lai-nhe.mp3");
-
-function playCorrectSound(){
-
-    audioCorrect.currentTime = 0;
-    audioCorrect.play();
-
-}
-
-function playWrongSound(){
-
-    audioWrong.currentTime = 0;
-    audioWrong.play();
-
-}
 
 function playSound(file){
 
@@ -24,9 +8,10 @@ function playSound(file){
     }
 
 
-    const audio = new Audio(
-        "assets/audio/" + file
-    );
+    const audio =
+        new Audio(
+            "assets/audio/" + file
+        );
 
 
     audio.play()
@@ -40,10 +25,3 @@ function playSound(file){
         });
 
 }
-/*
-function playSound(file){
-    const audio = new Audio(
-        "assets/audio/" + file
-    );
-    audio.play();
-}*/

@@ -1,146 +1,203 @@
-// quizUI.js
+// js/activity/quizUI.js
 
 let quizIndex = 0;
+let quizScore = 0;
 
 
-// =======================
+// =====================================
 // Khởi động Quiz
-// =======================
+// =====================================
 
-function quizUI(container, data, renderer){
+function quizUI(
+    container,
+    data,
+    renderer
+){
 
     quizIndex = 0;
+    quizScore = 0;
 
 
-    renderQuiz(
-        container,
-        data,
-        renderer
-    );
+    const nextButton =
+        document.getElementById(
+            "nextButton"
+        );
+    if(nextButton){
 
+        nextButton.style.display = "block";
+
+        //nextButton.disabled = true;
+    }
+
+
+    if(nextButton){
+
+        nextButton.onclick = function(){
+
+            quizIndex++;
+
+
+            renderQuiz(
+                container,
+                data,
+                renderer
+            );
+
+        };
+
+    }
+
+    renderQuiz(container,data,renderer);
 }
 
 
 
-// =======================
-// Hiển thị một câu
-// =======================
+// =====================================
+// Hiển thị câu hỏi
+// =====================================
 
-function renderQuiz(container, data, renderer){
+function renderQuiz(container,data,renderer){
 
-    container.innerHTML = "";
+    const nextButton =
+        document.getElementById("nextButton");
+
+    const progress =
+        document.getElementById("quizProgress");
 
 
     const question =
         data[quizIndex];
 
 
+    // =========================
+    // Hết câu hỏi
+    // =========================
+
     if(!question){
 
-        container.innerHTML =
-            "🎉 Hoàn thành bài học";
+        container.innerHTML = `
 
-        quizIndex = 0;
+            <div class="quizResult">
+
+                <h2>
+                    🎉 Hoàn thành!
+                </h2>
+
+                <h3>
+                    Điểm:
+                    ${quizScore}/${data.length}
+                </h3>
+
+            </div>
+
+        `;
+
+
+        if(progress){
+
+            progress.textContent = "";
+
+        }
+
+
+        if(nextButton){
+
+            nextButton.style.display = "none";
+
+            nextButton.onclick = null;
+
+        }
+
 
         return;
+
     }
 
 
-    // Renderer tự lo phần giao diện
+    // =========================
+    // Câu hỏi bình thường
+    // =========================
+
+    container.innerHTML = "";
+
+
+    if(progress){
+
+        progress.textContent =
+            `Câu ${quizIndex + 1} / ${data.length}`;
+
+    }
+
 
     renderer(
         container,
         question,
-        function(selectedAnswer){
+        function(
+            selectedIndex,
+            selectedButton
+        ){
 
-            checkQuizAnswer(
-                selectedAnswer,
-                question.correct
-            );
-
-
-            createNextButton(
+            checkAnswerUI(
                 container,
-                data,
-                renderer
+                question,
+                selectedIndex,
+                selectedButton,
+                nextButton
             );
 
         }
     );
 
 }
-
-
-
-// =======================
+// =====================================
 // Kiểm tra đáp án
-// =======================
+// =====================================
 
-function checkQuizAnswer(selected, correct){
+function checkAnswerUI(
+    container,
+    question,
+    selectedIndex,
+    selectedButton,
+    nextButton
 
+){
 
-    if(selected === correct){
+    const buttons = container.querySelectorAll(".answerBox button");
 
-        playSound("chinh-xac.mp3");
+    buttons.forEach(button => {
 
-        console.log("Đúng");
+        button.disabled = true;
+
+    });
+
+    if(selectedIndex === question.correct){
+
+        selectedButton.style.background = "green";
+
+        playSound("system/chinh-xac.mp3");
+        quizScore++;
 
     }
     else{
 
-        playSound("thu-lai-nhe.mp3");
+        selectedButton.style.background = "red";
 
-        console.log("Sai");
+        if(buttons[question.correct]){
+
+            buttons[question.correct].style.background = "green";
+
+        }
+
+        playSound("system/thu-lai-nhe.mp3");
 
     }
 
-}
+    // mở nút tiếp theo
 
+    if(nextButton){
 
+        nextButton.disabled =false;
 
-// =======================
-// Nút câu tiếp theo
-// =======================
-
-function createNextButton(
-    container,
-    data,
-    renderer
-){
-
-
-    if(container.querySelector(".nextBtn")){
-        return;
     }
-
-
-    const btn =
-        document.createElement("button");
-
-
-    btn.className =
-        "nextBtn";
-
-
-    btn.textContent =
-        "➡ Câu tiếp theo";
-
-
-    btn.onclick = function(){
-
-
-        quizIndex++;
-
-
-        renderQuiz(
-            container,
-            data,
-            renderer
-        );
-
-    };
-
-
-    container.appendChild(btn);
 
 }

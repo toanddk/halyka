@@ -132,8 +132,14 @@ function backToLevel(){
 
 }
 
+function resetQuiz(){
 
-function backToLesson(){
+    currentQuestion = 0;
+    score = 0;
+
+}
+
+function exitActivity(){
 
     currentLesson = null;
 
@@ -141,3 +147,4 @@ function backToLesson(){
     showLessonScreen();
 
 }
+
