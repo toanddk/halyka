@@ -7,7 +7,7 @@ let currentQuestion = 0;
 let score = 0;
 let quizData = null;
 let answered = false;
-
+let answeredQuestions = [];
 
 /**
  * Khởi động một bài Quiz
@@ -19,6 +19,7 @@ function quizActivity(container, lesson) {
     currentQuestion = 0;
     score = 0;
 
+    answeredQuestions = [];
     showQuestion(container);
 }
 
@@ -39,7 +40,13 @@ function showQuestion(container) {
     
     answered = false;
     showMessage("");
+    
+    
+    const progress = document.getElementById("quizProgress");
 
+    if (progress) {
+        progress.textContent = `Câu ${currentQuestion + 1} / ${quizData.length}`;
+    }
     const question = quizData[currentQuestion];
 
     renderQuizUI(
@@ -71,26 +78,24 @@ function checkAnswer(answerIndex) {
     answered = true;
 
 
-    const question =
-        quizData[currentQuestion];
+    const question = quizData[currentQuestion];
+    
+    if(answeredQuestions[currentQuestion]){
+        return;
+    }
+
+    answeredQuestions[currentQuestion] = true;
 
     if (answerIndex === question.correct) {
 
         score++;
 
         showMessage("🎉 Đúng rồi!");
-        if(currentSubject === "math"){
-            playSound("system/chinh-xac.mp3");
-        }
-
     } else {
 
         showMessage("😊 Chưa đúng!");
-                if(currentSubject === "math"){
-            playSound("system/thu-lai-nhe.mp3");
-        }
-
     }
+    
 
 }
 
