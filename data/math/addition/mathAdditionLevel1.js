@@ -1,8 +1,8 @@
-const mathAddititonLevel1 = [
+const mathAdditionLevel1 = [
 
     {
+        ui: "text-text",
         question: "1 + 2 = ?",
-
         answers: [
             "4",
             "5",
@@ -14,6 +14,7 @@ const mathAddititonLevel1 = [
 
 
     {
+        ui: "text-text",
         question: "2 + 3 = ?",
 
         answers: [
@@ -25,6 +26,7 @@ const mathAddititonLevel1 = [
         correct: 1
     },
     {
+        ui: "text-text",
         question: "4 + 1 = ?",
 
         answers: [
@@ -36,7 +38,8 @@ const mathAddititonLevel1 = [
         correct: 0
     },
     {
-            question: "5 + 2 = ?",
+        ui: "text-text",
+        question: "5 + 2 = ?",
 
         answers: [
             "5",
@@ -47,7 +50,8 @@ const mathAddititonLevel1 = [
         correct: 2
     },
     {
-            question: "3 + 6 = ?",
+        ui: "text-text",
+        question: "3 + 6 = ?",
 
         answers: [
             "8",
@@ -58,7 +62,8 @@ const mathAddititonLevel1 = [
         correct: 1
     },
     {
-            question: "7 + 1 = ?",
+        ui: "text-text",
+        question: "7 + 1 = ?",
 
         answers: [
             "8",

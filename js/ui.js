@@ -222,9 +222,6 @@ function resetActivityUI(){
     const progress =
         document.getElementById("quizProgress");
 
-    const nextButton =
-        document.getElementById("nextButton");
-
     if(progress){
         progress.textContent = "";
     }

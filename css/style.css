@@ -71,6 +71,26 @@ button{
 
 }
 
+.quiz-navigation .quiz-navigation-button {
+    width: auto;
+
+    background-color: #FFB74D !important;
+    color: #333333 !important;
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 10px 22px;
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
 button:hover{
 
     transform:scale(1.05);
@@ -169,4 +189,33 @@ button:active{
 
 .screen {
     padding-top: 20px;
+}
+/* ========================================
+   QUIZ NAVIGATION
+   ======================================== */
+
+.quiz-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.quiz-navigation .quiz-navigation-button:hover {
+    background-color: #64B5F6 !important;
+    transform: scale(1.05);
+}
+
+
+.quiz-navigation .quiz-navigation-button:active {
+    background-color: #F57C00 !important;
+    transform: scale(0.95);
+}
+
+.quiz-question {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 25px;
+    line-height: 1.4;
 }

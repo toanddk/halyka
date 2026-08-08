@@ -1,6 +1,6 @@
 const lessonData = {
     addition: {
-        1: mathAddititonLevel1
+        1: mathAdditionLevel1
     },
    
     //vietnamese

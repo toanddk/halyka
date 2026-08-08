@@ -1,33 +1,28 @@
-function renderActivity(){
+//js/activity/renderActivity.js
 
+function renderActivity() {
     const container =
         document.getElementById(
             "activityContainer"
         );
 
-    const data = getLessonData();
+    const lesson = getCurrentLesson();
 
-    switch(currentLesson){
+    switch (lesson.type) {
 
-        case "addition":
-
-            mathUI(container, data, mathRenderer );
-            break;
-
-        case "animals":
-
-            animalUI(container, data, animalRenderer);
+        case "quiz":
+            quizActivity(container,lesson);
             break;
 
         case "reading":
-
-            readingUI(container, data);
+            ReadingActivity(container,lesson);
             break;
 
-        default:
-
-            console.log("Chưa có UI" );
-
+        case "listening":
+            ListeningActivity(container,lesson);
+            break;
+        default: 
+        console.error("chua co Activity:", lesson.type);
     }
-
 }
+

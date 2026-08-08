@@ -21,13 +21,15 @@ const subjects = {
                 {
                     id: "addition",
                     name: "➕ Phép cộng",
-                    ui: "quiz"
+                    type: "quiz",
+                    datafile: "math/addition/mathAddititonLevel1.js"
                 },
 
                 {
                     id: "subtraction",
                     name: "➖ Phép trừ",
-                    ui: "quiz"
+                    type: "quiz",
+                    datafile: null
                 }
 
             ],
@@ -38,13 +40,15 @@ const subjects = {
                 {
                     id: "multiply",
                     name: "✖ Phép nhân",
-                    ui: "quiz"
+                    type: "quiz",
+                    datafile: null
                 },
 
                 {
                     id: "divide",
                     name: "➗ Phép chia",
-                    ui: "quiz"
+                    type: "quiz",
+                    datafile: null
                 }
 
             ]
@@ -67,19 +71,22 @@ const subjects = {
                 {
                     id: "reading",
                     name: "📖 Tập đọc",
-                    ui: "reading"
-                },
+                    type: "reading",
+                    datafile: "vietnamese/reading/vietnameseReadingLevel1.js" 
+               },
 
                 {
                     id: "animals",
                     name: "🐶 Động vật",
-                    ui: "quiz"
+                    type: "quiz",
+                    datafile: "vietnamese/animals/vietnameseAnimalsLevel1.js" 
                 },
 
                 {
                     id: "objects",
                     name: "🍎 Đồ vật",
-                    ui: "quiz"
+                    type: "quiz",
+                    datafile: null
                 }
 
             ],
@@ -90,7 +97,8 @@ const subjects = {
                 {
                     id: "story",
                     name: "📚 Đọc hiểu",
-                    ui: "reading"
+                    type: "reading",
+                    datafile: null
                 }
 
             ]
@@ -112,13 +120,15 @@ const subjects = {
                 {
                     id: "alphabet",
                     name: "🔤 Bảng chữ cái",
-                    ui: "listening"
+                    type: "listening",
+                    datafile: null
                 },
 
                 {
                     id: "animals",
                     name: "🐶 Animals",
-                    ui: "listening"
+                    type: "listening",
+                    datafile: null
                 }
 
             ]
