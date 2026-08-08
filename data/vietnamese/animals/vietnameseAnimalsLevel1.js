@@ -2,7 +2,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-cho.jpg",
+        image: "assets/animals/con-cho.webp",
         question: "Con gì đây 🐶 ?",
         answers: [
             { text: "con chó", sound: "vietnamese/animals/con-cho.mp3" },
@@ -14,7 +14,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-meo.jpg",
+        image: "assets/animals/con-meo.webp",
         question: "Con gì đây 🐱 ?",
         answers: [
             { text: "con chó",sound: "vietnamese/animals/con-cho.mp3" },
@@ -26,7 +26,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-ga-con.jpg",
+        image: "assets/animals/con-ga-con.webp",
         question: "Con gì đây ?",   
         answers: [
             { text: "con chó", sound: "vietnamese/animals/con-cho.mp3" },
@@ -37,7 +37,7 @@ const vietnameseAnimalsLevel1 = [
     },
     {
         ui: "image-text",
-        image: "assets/animals/con-ga-trong.jpg",
+        image: "assets/animals/con-ga-trong.webp",
         question: "Con gì đây ?",   
         answers: [
             { text: "con chó", sound: "vietnamese/animals/con-cho.mp3" },
@@ -49,7 +49,7 @@ const vietnameseAnimalsLevel1 = [
 
         {
         ui: "image-text",
-        image: "assets/animals/con-ga-mai.jpg",
+        image: "assets/animals/con-ga-mai.webp",
         question: "Con gì đây ?",   
         answers: [
             { text: "con gà mái", sound: "vietnamese/animals/con-ga-mai.mp3" },
@@ -61,7 +61,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-vit.png",
+        image: "assets/animals/con-vit.webp",
         question: "Con gì đây 🦆 ?", 
         answers: [
             { text: "con chó", sound: "vietnamese/animals/con-cho.mp3" },
@@ -73,7 +73,7 @@ const vietnameseAnimalsLevel1 = [
     
     {
         ui: "image-text",
-        image: "assets/animals/con-heo.png",
+        image: "assets/animals/con-heo.webp",
         question: "Con gì đây 🐷 ?", 
         answers: [
             { text: "con heo", sound: "vietnamese/animals/con-heo.mp3" },
@@ -85,7 +85,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-bo.png",
+        image: "assets/animals/con-bo.webp",
         question: "Con gì đây 🐮 ?", 
         answers: [
             { text: "con gà", sound: "vietnamese/animals/con-ga.mp3" },
@@ -97,7 +97,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-tho.jpg",
+        image: "assets/animals/con-tho.webp",
         question: "Con gì đây 🐰 ?", 
         answers: [
             { text: "con thỏ", sound: "vietnamese/animals/con-tho.mp3" },
@@ -109,7 +109,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-voi.jpg",
+        image: "assets/animals/con-voi.webp",
         question: "Con gì đây 🐘 ?", 
         answers: [
             { text: "con heo", sound: "vietnamese/animals/con-heo.mp3" },
@@ -120,7 +120,7 @@ const vietnameseAnimalsLevel1 = [
     },
     {
         ui: "image-text",
-        image: "assets/animals/con-gau.jpg",
+        image: "assets/animals/con-gau.webp",
         question: "Con gì đây 🐼 ?", 
         answers: [
             { text: "con gấu", sound: "vietnamese/animals/con-gau.mp3" },
@@ -131,7 +131,7 @@ const vietnameseAnimalsLevel1 = [
     },
     {
         ui: "image-text",
-        image: "assets/animals/con-ho.png",
+        image: "assets/animals/con-ho.webp",
         question: "Con gì đây 🐯 ?", 
         answers: [
             { text: "con gà", sound: "vietnamese/animals/con-ga.mp3" },
@@ -142,7 +142,7 @@ const vietnameseAnimalsLevel1 = [
     },
     {
         ui: "image-text",
-        image: "assets/animals/con-ca.png",
+        image: "assets/animals/con-ca.webp",
         question: "Con gì đây 🐠 ?", 
         answers: [
             { text: "con gà", sound: "vietnamese/animals/con-ga.mp3" },
@@ -154,7 +154,7 @@ const vietnameseAnimalsLevel1 = [
 
         {
         ui: "image-text",
-        image: "assets/animals/con-chim-bo-cau.png",
+        image: "assets/animals/con-chim-bo-cau.webp",
         question: "Con gì đây ?", 
         answers: [
             { text: "con chim bồ câu", sound: "vietnamese/animals/con-chim-bo-cau.mp3" },
@@ -166,7 +166,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-ran.png",
+        image: "assets/animals/con-ran.webp",
         question: "Con gì đây ?", 
         answers: [
             { text: "con rắn", sound: "vietnamese/animals/con-ran.mp3" },
@@ -178,7 +178,7 @@ const vietnameseAnimalsLevel1 = [
 
     {
         ui: "image-text",
-        image: "assets/animals/con-chim-canh-cut.png",
+        image: "assets/animals/con-chim-canh-cut.webp",
         question: "Con gì đây 🐧 ?", 
         answers: [
             { text: "con vịt", sound: "vietnamese/animals/con-vit.mp3" },
