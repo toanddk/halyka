@@ -47,6 +47,54 @@ const mathSubtractionLevel1 = [
         correct: 1
     },
 
+    {
+        ui: "text-text",
+
+        question: "🌸 - 🌸 = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "0",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "🌸 🌸 🌸 - 🌸 = ?",
+
+        answers: [
+            {
+                text: "3",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "2",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 1
+    },
+
+
 
     {
         ui: "text-text",
@@ -136,6 +184,29 @@ const mathSubtractionLevel1 = [
             },
             {
                 text: "6",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 0
+    },
+
+    {
+        ui: "text-text",
+
+        question: "🎈 🎈 🎈 🎈 🎈 - 🎈 = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "2",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "3",
                 sound: "system/thu-lai-nhe.mp3"
             }
         ],

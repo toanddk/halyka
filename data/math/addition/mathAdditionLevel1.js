@@ -1,4 +1,312 @@
 const mathAdditionLevel1 = [
+//icon
+
+    {
+        ui: "text-text",
+
+        question: "🍎 + 🍎 🍎 = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "3",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+    {
+        ui: "text-text",
+
+        question: "🍎 🍎 🍎 + 🍎 🍎 = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "⚽ ⚽ + ⚽ ⚽ ⚽ = ?",
+
+        answers: [
+            {
+                text: "2",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 1
+    },
+
+    {
+        ui: "text-text",
+
+        question: "0 + ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "7",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "⚽ ⚽ ⚽ ⚽ + ⚽ = ?",
+
+        answers: [
+            {
+                text: "5",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "3",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 0
+    },
+
+    {
+        ui: "text-text",
+
+        question: "⚽ ⚽ ⚽ + ⚽ ⚽ ⚽ = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "6",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "⚽ ⚽ ⚽ ⚽ ⚽ + ⚽ ⚽ = ?",
+
+        answers: [
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "3",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "7",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "⚽ ⚽ ⚽ + ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ = ?",
+
+        answers: [
+            {
+                text: "8",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "9",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "7",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 1
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ + ❤️ = ?",
+
+        answers: [
+            {
+                text: "8",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "9",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "6",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 0
+    },
+
+    {
+        ui: "text-text",
+
+        question: "💖 + 💖 = ?",
+
+        answers: [
+            {
+                text: "2",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "3",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 0
+    },
+
+    {
+        ui: "text-text",
+
+        question: "💖 + 💖 💖 = ?",
+
+        answers: [
+            {
+                text: "8",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "3",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "6",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 1
+    },    
+
+    {
+        ui: "text-text",
+
+        question: "🥎 🥎 + 🥎 🥎 = ?",
+
+        answers: [
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "2",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "4",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },    
+
+        {
+        ui: "text-text",
+
+        question: "🍎 🍎 🍎 🍎 + 🍎 🍎 🍎 🍎 = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "2",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "8",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },  
+
+
+//********numbers*********//
 
     {
         ui: "text-text",
@@ -26,7 +334,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "5 + 0 = ?",
+        question: "3 + 3 = ?",
 
         answers: [
             {
@@ -50,7 +358,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "2 + 3 = ?",
+        question: "2 + 4 = ?",
 
         answers: [
             {
@@ -58,7 +366,7 @@ const mathAdditionLevel1 = [
                 sound: "system/thu-lai-nhe.mp3"
             },
             {
-                text: "5",
+                text: "6",
                 sound: "system/chinh-xac.mp3"
             },
             {
@@ -73,7 +381,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "0 + 7 = ?",
+        question: "3 + 4 = ?",
 
         answers: [
             {
@@ -120,7 +428,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "3 + 3 = ?",
+        question: "4 + 2 = ?",
 
         answers: [
             {
@@ -144,7 +452,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "5 + 2 = ?",
+        question: "6 + 1 = ?",
 
         answers: [
             {

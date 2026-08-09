@@ -214,10 +214,14 @@ button:active{
 }
 
 .quiz-question {
-    font-size: 20px;
+    font-size: 39px;
     font-weight: bold;
     margin: 15px 0 25px;
     line-height: 1.4;
+}
+
+.question-icon {
+    font-size: 70px;
 }
 
 .question-audio-button {
