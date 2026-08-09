@@ -42,7 +42,7 @@ const vietnameseAnimalsLevel1 = [
         answers: [
             { text: "con chó", sound: "vietnamese/animals/con-cho.mp3" },
             { text: "con gà con",  sound: "vietnamese/animals/con-ga.mp3"  },
-            { text: "con ga trống", sound: "vietnamese/animals/con-ga-trong.mp3" }
+            { text: "con gà trống", sound: "vietnamese/animals/con-ga-trong.mp3" }
         ],
         correct: 2
     },
@@ -54,7 +54,7 @@ const vietnameseAnimalsLevel1 = [
         answers: [
             { text: "con gà mái", sound: "vietnamese/animals/con-ga-mai.mp3" },
             { text: "con gà con",  sound: "vietnamese/animals/con-ga.mp3"  },
-            { text: "con ga trống", sound: "vietnamese/animals/con-ga-trong.mp3" }
+            { text: "con gà trống", sound: "vietnamese/animals/con-ga-trong.mp3" }
         ],
         correct: 0
     },

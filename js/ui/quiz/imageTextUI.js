@@ -58,7 +58,7 @@ function renderImageText(
             actions,
             {
                 containerClass:
-                    "animal-answer-box",
+                    "image-answer-box",
 
                 buttonClass:
                     "answer-balloon"

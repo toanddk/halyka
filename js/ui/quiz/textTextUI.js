@@ -14,6 +14,32 @@ function renderTextText(
     // ========================================
     // QUESTION
     // ========================================
+// ========================================
+// QUESTION AUDIO
+// ========================================
+
+if (question.audio) {
+
+    const audioButton =
+        document.createElement("button");
+
+    audioButton.className =
+        "question-audio-button";
+
+    audioButton.textContent =
+        "🔊 Nghe câu hỏi";
+
+    audioButton.addEventListener(
+        "click",
+        () => {
+            playSound(question.audio);
+        }
+    );
+
+    wrapper.appendChild(
+        audioButton
+    );
+}
 
     const questionElement =
         document.createElement("div");

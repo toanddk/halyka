@@ -15,7 +15,7 @@ function renderActivity() {
             break;
 
         case "reading":
-            ReadingActivity(container,lesson);
+            //ReadingActivity(container,lesson);
             break;
 
         case "listening":

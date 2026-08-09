@@ -219,3 +219,23 @@ button:active{
     margin: 15px 0 25px;
     line-height: 1.4;
 }
+
+.question-audio-button {
+    background: #FFD54F;
+    color: #333;
+    width: auto;
+    padding: 12px 25px;
+    margin: 10px auto 20px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.question-audio-button:hover {
+    background: #FFCA28;
+    transform: scale(1.05);
+}
+
+.question-audio-button:active {
+    transform: scale(0.95);
+}

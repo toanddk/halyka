@@ -14,12 +14,18 @@ let answeredQuestions = [];
  */
 function quizActivity(container, lesson) {
 
-    quizData = getLessonData();
+    const allQuestions = getLessonData();
+
+    // Chọn ngẫu nhiên 10 câu từ toàn bộ dữ liệu
+    quizData = [...allQuestions]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 10);
 
     currentQuestion = 0;
     score = 0;
 
     answeredQuestions = [];
+
     showQuestion(container);
 }
 
@@ -140,7 +146,7 @@ function finishQuiz(container) {
         <h2>🎉 Hoàn thành!</h2>
         <p>Điểm: ${score} / ${quizData.length}</p>
         <button id="quizRestartButton">
-            🔄 Làm lại
+            🔄 Tiếp Tục
         </button>
     `;
 

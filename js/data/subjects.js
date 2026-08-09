@@ -1,14 +1,11 @@
+// js/data/subjects.js
 function getLessonList(subject, level) {
 
     return subjects[subject].levels[level] || [];
 
 }
 
-// js/data/subjects.js
-
-
 const subjects = {
-
 
     math: {
 
@@ -17,6 +14,13 @@ const subjects = {
         levels: {
 
             1: [
+
+                {
+                    id: "numbers",
+                    name: "🔢Số đếm ",
+                    type: "quiz",
+                    datafile: "math/addition/matmath/numbers/mathNumbersLevel1.js"
+                },
 
                 {
                     id: "addition",
@@ -29,7 +33,7 @@ const subjects = {
                     id: "subtraction",
                     name: "➖ Phép trừ",
                     type: "quiz",
-                    datafile: null
+                    datafile: "math/subtraction/mathSubtractionLevel1.js"
                 }
 
             ],
@@ -56,23 +60,25 @@ const subjects = {
         }
 
     },
-
-
-
-    vietnamese: {
+   vietnamese: {
 
         title: "📖 Tiếng Việt",
 
         levels: {
 
-
             1: [
+                {
+                    id: "vietnameseAlphabet",
+                    name: "🔤 Bảng chứ cái",
+                    type: "quiz",
+                    datafile: "vietnamese/alphabet/vietnameseAlphabetLevel1.js" 
+               },
 
                 {
-                    id: "reading",
-                    name: "📖 Tập đọc",
-                    type: "reading",
-                    datafile: "vietnamese/reading/vietnameseReadingLevel1.js" 
+                    id: "colors",
+                    name: "⚙ Màu sắc",
+                    type: "quiz",
+                    datafile: "vietnamese/Colors/vietnameseColorsLevel1.js" 
                },
 
                 {
@@ -106,7 +112,6 @@ const subjects = {
         }
 
     },
-
 
     english: {
 

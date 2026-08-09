@@ -1,226 +1,106 @@
 // js/ui/quiz/quizCommon.js
 
 
-/*
- * ========================================
- * QUESTION CONTAINER
- * ========================================
- */
+/*========= * QUESTION CONTAINER * =============*/
 
 function createQuestionContainer() {
 
-    const wrapper =
-        document.createElement("div");
+    const wrapper = document.createElement("div");
 
-    wrapper.className =
-        "quiz-container";
-
+    wrapper.className = "quiz-container";
 
     return wrapper;
 }
 
 
-/*
- * ========================================
- * ANSWERS
- * ========================================
- */
+/*====== * ANSWERS * ======= */
 
-function createAnswers(
-    question,
-    actions,
-    options = {}
-) {
+function createAnswers(question, actions, options = {}) {
 
-    const answerContainer =
-        document.createElement("div");
-
+    const answerContainer = document.createElement("div");
 
     // Class mặc định
-    answerContainer.className =
-        options.containerClass ||
-        "quiz-answers";
+    answerContainer.className = options.containerClass || "quiz-answers";
 
 
-    question.answers.forEach(
-        (answer, index) => {
+    question.answers.forEach( (answer, index) => {
 
-            const button =
-                document.createElement("button");
-
+            const button = document.createElement("button");
 
             // Class mặc định
-            button.className =
-                options.buttonClass ||
-                "quiz-answer";
+            button.className = options.buttonClass || "quiz-answer";
 
 
-            /*
-             * ==============================
+            /* ==============================
              * Nội dung đáp án
-             * ==============================
-             *
-             * Toán:
-             *
-             * "3"
-             *
-             * Động vật:
-             *
-             * {
-             *     text: "Con chó",
-             *     sound: "cho.mp3"
-             * }
-             */
+             * ==============================*/
 
-            if (
-                typeof answer === "string"
-            ) {
+            if ( typeof answer === "string" ) {
+                button.textContent = answer;
 
-                button.textContent =
-                    answer;
-
-            } else {
-
-                button.textContent =
-                    answer.text;
-
-            }
-
-
-            /*
-             * ==============================
-             * Click answer
-             * ==============================
-             */
-
-            button.addEventListener(
-                "click",
-                () => {
-
-
-                    /*
-                     * Phát sound của answer
-                     *
-                     * Chỉ thực hiện nếu
-                     * answer có sound.
-                     */
-
-                    if (
-                        typeof answer === "object" &&
-                        answer.sound
-                    ) {
-
-                        playSound(
-                            answer.sound
-                        );
-
+            } else 
+                { button.textContent = answer.text;
                     }
 
+            /*=====* Click answer * ======*/
 
-                    /*
-                     * Gửi index về
-                     * quizActivity
-                     */
+            button.addEventListener( "click", () => {
 
-                    actions.onAnswer(
-                        index
-                    );
+                    /* Phát sound của answer
+                     * Chỉ thực hiện nếu answer có sound. */
+
+                    if (typeof answer === "object" && answer.sound ) {
+
+                        playSound( answer.sound  );
+                    }
+
+                    /* Gửi index về quizActivity  */
+                    actions.onAnswer( index );
 
                 }
             );
-
-
-            answerContainer.appendChild(
-                button
-            );
-
+            
+            answerContainer.appendChild( button );
         }
     );
-
 
     return answerContainer;
 }
 
+/*=========* NAVIGATION* ===========*/
 
-/*
- * ========================================
- * NAVIGATION
- * ========================================
- */
+function createNavigation(container, actions) {
 
-function createNavigation(
-    container,
-    actions
-) {
-
-    const navigation =
-        document.createElement("div");
-
+    const navigation = document.createElement("div");
     navigation.className ="quiz-navigation";
 
-
-    /*
-     * ==============================
-     * NEXT
-     * ==============================
-     */
-    const nextButton =
-        document.createElement("button");
+    /*===========* NEXT* ===========*/
+    const nextButton = document.createElement("button");
         nextButton.className = "quiz-navigation-button";
-    nextButton.textContent =
-        "Câu tiếp theo";
+    nextButton.textContent = "Câu tiếp theo";
 
-
-    nextButton.addEventListener(
-        "click",
-        () => {
-
-            actions.onNext();
-
+    nextButton.addEventListener( "click", () => {
+        actions.onNext();
         }
     );
 
 
-    /*
-     * ==============================
-     * PREVIOUS
-     * ==============================
-     */
-    
-    const previousButton =
-        document.createElement("button");
-        previousButton.className = "quiz-navigation-button";
-    previousButton.textContent =
-        "Câu trước";
+    /*========== * PREVIOUS * ============ */
+    const previousButton = document.createElement("button");
+    previousButton.className = "quiz-navigation-button";
+    previousButton.textContent = "Câu trước";
 
-
-    previousButton.addEventListener(
-        "click",
-        () => {
-
-            actions.onPrevious();
-
+    previousButton.addEventListener("click", () => {
+        actions.onPrevious();
         }
     );
 
-    /*
-     * ==============================
-     * Thứ tự button
-     * ==============================
-     *
-     * Tiếp → nằm trước
-     * ← Trước nằm sau
-     */
+    /*===========* Thứ tự button * =============
+     * Tiếp → nằm trước * ← Trước nằm sau */
 
-    navigation.appendChild(
-        previousButton
-    );
+    navigation.appendChild(previousButton);
 
-    navigation.appendChild(
-        nextButton
-    );
+    navigation.appendChild(nextButton );
 
-    container.appendChild(
-        navigation
-    );
+    container.appendChild(navigation );
 }

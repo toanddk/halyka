@@ -1,9 +1,9 @@
-const mathAdditionLevel1 = [
+const mathSubtractionLevel1 = [
 
     {
         ui: "text-text",
 
-        question: "1 + 2 = ?",
+        question: "1 - 1 = ?",
 
         answers: [
             {
@@ -14,51 +14,28 @@ const mathAdditionLevel1 = [
                 text: "5",
                 sound: "system/thu-lai-nhe.mp3"
             },
+            {
+                text: "0",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    },
+
+
+    {
+        ui: "text-text",
+
+        question: "3 - 1 = ?",
+
+        answers: [
             {
                 text: "3",
-                sound: "system/chinh-xac.mp3"
-            }
-        ],
-
-        correct: 2
-    },
-
-    {
-        ui: "text-text",
-
-        question: "5 + 0 = ?",
-
-        answers: [
-            {
-                text: "4",
                 sound: "system/thu-lai-nhe.mp3"
             },
-            {
-                text: "5",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
-                text: "5",
-                sound: "system/chinh-xac.mp3"
-            }
-        ],
-
-        correct: 2
-    },
-
-
-    {
-        ui: "text-text",
-
-        question: "2 + 3 = ?",
-
-        answers: [
             {
                 text: "2",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
-                text: "5",
                 sound: "system/chinh-xac.mp3"
             },
             {
@@ -70,46 +47,23 @@ const mathAdditionLevel1 = [
         correct: 1
     },
 
-    {
-        ui: "text-text",
-
-        question: "0 + 7 = ?",
-
-        answers: [
-            {
-                text: "4",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
-                text: "5",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
-                text: "7",
-                sound: "system/chinh-xac.mp3"
-            }
-        ],
-
-        correct: 2
-    },
-
 
     {
         ui: "text-text",
 
-        question: "4 + 1 = ?",
+        question: "4 - 1 = ?",
 
         answers: [
-            {
-                text: "5",
-                sound: "system/chinh-xac.mp3"
-            },
             {
                 text: "3",
-                sound: "system/thu-lai-nhe.mp3"
+                sound: "system/chinh-xac.mp3"
             },
             {
                 text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "5",
                 sound: "system/thu-lai-nhe.mp3"
             }
         ],
@@ -117,46 +71,23 @@ const mathAdditionLevel1 = [
         correct: 0
     },
 
+
     {
         ui: "text-text",
 
-        question: "3 + 3 = ?",
+        question: "5 - 2 = ?",
 
         answers: [
+            {
+                text: "5",
+                sound: "system/thu-lai-nhe.mp3"
+            },
             {
                 text: "4",
                 sound: "system/thu-lai-nhe.mp3"
             },
             {
-                text: "5",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
-                text: "6",
-                sound: "system/chinh-xac.mp3"
-            }
-        ],
-
-        correct: 2
-    },
-
-
-    {
-        ui: "text-text",
-
-        question: "5 + 2 = ?",
-
-        answers: [
-            {
-                text: "5",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
                 text: "3",
-                sound: "system/thu-lai-nhe.mp3"
-            },
-            {
-                text: "7",
                 sound: "system/chinh-xac.mp3"
             }
         ],
@@ -168,7 +99,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "3 + 6 = ?",
+        question: "6 - 6 = ?",
 
         answers: [
             {
@@ -176,7 +107,7 @@ const mathAdditionLevel1 = [
                 sound: "system/thu-lai-nhe.mp3"
             },
             {
-                text: "9",
+                text: "0",
                 sound: "system/chinh-xac.mp3"
             },
             {
@@ -192,11 +123,11 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "7 + 1 = ?",
+        question: "7 - 1 = ?",
 
         answers: [
             {
-                text: "8",
+                text: "6",
                 sound: "system/chinh-xac.mp3"
             },
             {
@@ -215,11 +146,11 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "0 + 1 = ?",
+        question: "5 - 1 = ?",
 
         answers: [
             {
-                text: "1",
+                text: "4",
                 sound: "system/chinh-xac.mp3"
             },
             {
@@ -238,15 +169,15 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "1 + 1 = ?",
+        question: "9 - 1 = ?",
 
         answers: [
             {
-                text: "8",
+                text: "7",
                 sound: "system/thu-lai-nhe.mp3"
             },
             {
-                text: "2",
+                text: "8",
                 sound: "system/chinh-xac.mp3"
             },
             {
@@ -261,7 +192,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "3 + 0 = ?",
+        question: "3 - 0 = ?",
 
         answers: [
             {
@@ -284,7 +215,7 @@ const mathAdditionLevel1 = [
         {
         ui: "text-text",
 
-        question: "4 + 4 = ?",
+        question: "9 - 1 = ?",
 
         answers: [
             {
@@ -302,6 +233,75 @@ const mathAdditionLevel1 = [
         ],
 
         correct: 2
-    }  
+    },
+    
+        {
+        ui: "text-text",
+
+        question: "9 - 3 = ?",
+
+        answers: [
+            {
+                text: "6",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "2",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "8",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 0
+    },
+
+        {
+        ui: "text-text",
+
+        question: "9 - 6 = ?",
+
+        answers: [
+            {
+                text: "6",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "3",
+                sound: "system/chinh-xac.mp3"
+            },
+            {
+                text: "8",
+                sound: "system/thu-lai-nhe.mp3"
+            }
+        ],
+
+        correct: 1
+    },
+
+        {
+        ui: "text-text",
+
+        question: "9 - 9 = ?",
+
+        answers: [
+            {
+                text: "4",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "2",
+                sound: "system/thu-lai-nhe.mp3"
+            },
+            {
+                text: "0",
+                sound: "system/chinh-xac.mp3"
+            }
+        ],
+
+        correct: 2
+    }
 
 ];

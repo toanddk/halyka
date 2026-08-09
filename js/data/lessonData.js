@@ -1,16 +1,32 @@
 const lessonData = {
+    //math
+    numbers: {
+        1: mathNumbersLevel1
+    },
     addition: {
         1: mathAdditionLevel1
     },
-   
+
+    subtraction: {
+        1: mathSubtractionLevel1
+    },
+
     //vietnamese
+    vietnameseAlphabet: {
+        1: vietnameseAlphabetLevel1
+    },
     reading: {
         1: vietnameseReadingLevel1
     },
 
     animals: {
         1: vietnameseAnimalsLevel1
+    },
+
+    colors: {
+        1: vietnameseColorsLevel1
     }
+
 
 };
 
