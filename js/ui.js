@@ -84,6 +84,11 @@ function topScreen() {
         "🔤 Tiếng Anh",
         () => selectSubject("english")
     );
+    createButton(
+        "subjectList",
+        "🧩 Puzzle",
+        () => selectSubject("puzzle")
+    );
 
 }
 

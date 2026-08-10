@@ -25,8 +25,13 @@ const lessonData = {
 
     colors: {
         1: vietnameseColorsLevel1
-    }
+    },
 
+    //puzzle
+    puzzle: {
+        1: puzzleLevel1,
+        2: puzzleLevel2
+    },
 
 };
 

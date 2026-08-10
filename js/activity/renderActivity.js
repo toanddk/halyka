@@ -14,12 +14,12 @@ function renderActivity() {
             quizActivity(container,lesson);
             break;
 
-        case "reading":
-            //ReadingActivity(container,lesson);
+        case "puzzle":
+            puzzleActivity(container,lesson);
             break;
 
         case "listening":
-            ListeningActivity(container,lesson);
+            //ListeningActivity(container,lesson);
             break;
         default: 
         console.error("chua co Activity:", lesson.type);

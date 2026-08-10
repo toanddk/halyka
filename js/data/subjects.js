@@ -113,9 +113,9 @@ const subjects = {
 
     },
 
-    english: {
+    puzzle: {
 
-        title: "🔤 Tiếng Anh",
+        title: " Puzzle ",
 
         levels: {
 
@@ -123,19 +123,20 @@ const subjects = {
             1: [
 
                 {
-                    id: "alphabet",
-                    name: "🔤 Bảng chữ cái",
-                    type: "listening",
-                    datafile: null
-                },
+                    id: "puzzle",
+                    name: "Ghép hình",
+                    type: "puzzle",
+                    datafile: "puzzle/puzzleLevel1.js"
+                }
+            ],
+            2: [
 
                 {
-                    id: "animals",
-                    name: "🐶 Animals",
-                    type: "listening",
-                    datafile: null
+                    id: "puzzle",
+                    name: "Ghép hình",
+                    type: "puzzle",
+                    datafile: "puzzle/puzzleLevel2.js"
                 }
-
             ]
 
         }

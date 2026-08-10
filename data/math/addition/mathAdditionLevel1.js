@@ -346,7 +346,7 @@ const mathAdditionLevel1 = [
                 sound: "system/thu-lai-nhe.mp3"
             },
             {
-                text: "5",
+                text: "6",
                 sound: "system/chinh-xac.mp3"
             }
         ],
