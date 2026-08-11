@@ -39,7 +39,7 @@ const subjects = {
             ],
 
 
-            2: [
+            2: [null
 
                 {
                     id: "multiply",
@@ -92,7 +92,7 @@ const subjects = {
                     id: "objects",
                     name: "🍎 Đồ vật",
                     type: "quiz",
-                    datafile: null
+                   datafile: null
                 }
 
             ],

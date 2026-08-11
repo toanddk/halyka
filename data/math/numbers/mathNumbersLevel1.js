@@ -116,8 +116,8 @@ const mathNumbersLevel1 = [
     },
     {
         ui: "text-text",
-        question: "Số này là số nào? 20",
-        answers: ["89", "90", "91"],
+        question: "Số này là số nào? 89",
+        answers: ["98", "89", "91"],
         correct: 1
     },
     // ========================================

@@ -114,9 +114,15 @@ function imageGridUI(
         /*piece.textContent =
             pieceIndex + 1;
         */
-       if(puzzle.showNumber !== false){
+       /*if(puzzle.showNumber !== false){
         piece.textContent = pieceIndex + 1;
-       }
+       }*/
+      if(puzzle.showNumber !== false){
+        const number = document.createElement("span");
+        number.className = "puzzle-piece-number";
+        number.textContent = pieceIndex + 1;
+        piece.appendChild(number);
+      }
             // ====================================
         // POINTER SETTINGS
         // ====================================
@@ -127,9 +133,11 @@ function imageGridUI(
         // ====================================
         // POINTER DOWN
         // ====================================
-        piece.addEventListener(
-            "pointerdown",
-            function (event) {
+        piece.addEventListener("pointerdown", function (event) {
+            
+            if(puzzleCompleted){
+                return;
+            }
                 event.preventDefault();
                 selectedPiece =
                     piece;
