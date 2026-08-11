@@ -2,21 +2,48 @@
 
 const audioCache = {};
 
-function playSound(file) {
+let audioUnlocked = false;
+
+
+/**
+ * Lấy Audio object từ cache
+ */
+function getAudio(file) {
 
     if (!file) {
-        return;
+        return null;
     }
 
     let audio = audioCache[file];
 
     if (!audio) {
 
-        audio = new Audio("assets/audio/" + file);
+        audio =
+            new Audio("assets/audio/" + file);
 
         audio.preload = "auto";
 
         audioCache[file] = audio;
+    }
+
+    return audio;
+}
+
+
+/**
+ * Phát âm thanh
+ */
+function playSound(file) {
+
+    if (!file) {
+        return;
+    }
+
+    const audio =
+        getAudio(file);
+
+    if (!audio) {
+        return;
     }
 
     audio.pause();
@@ -34,31 +61,54 @@ function playSound(file) {
         });
 }
 
-let audioUnlocked = false;
 
+/**
+ * Unlock audio trên mobile
+ *
+ * Phải được gọi trong một thao tác
+ * của người dùng như pointerdown / click.
+ */
+function unlockAudio(file) {
 
-function unlockAudio() {
-
-    if (audioUnlocked) {
+    if (!file) {
         return;
     }
 
     const audio =
-        new Audio("system/chinh-xac.mp3");
+        getAudio(file);
+
+    if (!audio) {
+        return;
+    }
 
     audio.volume = 0;
+
+    audio.currentTime = 0;
 
     audio.play()
         .then(() => {
 
             audio.pause();
+
             audio.currentTime = 0;
+
+            audio.volume = 1;
 
             audioUnlocked = true;
 
+            console.log(
+                "Audio unlocked:",
+                file
+            );
+
         })
-        .catch(() => {
-            // Mobile chưa cho phép audio
+        .catch(error => {
+
+            console.log(
+                "Audio unlock error:",
+                error
+            );
+
         });
 }
 
