@@ -2,11 +2,11 @@
 
 function renderActivity() {
     const container =
-        document.getElementById(
-            "activityContainer"
-        );
+        document.getElementById("activityContainer" );
 
     const lesson = getCurrentLesson();
+
+    container.innerHTML= "";
 
     switch (lesson.type) {
 

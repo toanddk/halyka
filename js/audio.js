@@ -2,11 +2,9 @@
 
 const audioCache = {};
 
-let audioUnlocked = false;
-
 
 /**
- * Lấy Audio object từ cache
+ * Lấy Audio object
  */
 function getAudio(file) {
 
@@ -14,11 +12,9 @@ function getAudio(file) {
         return null;
     }
 
-    let audio = audioCache[file];
+    if (!audioCache[file]) {
 
-    if (!audio) {
-
-        audio =
+        const audio =
             new Audio("assets/audio/" + file);
 
         audio.preload = "auto";
@@ -26,7 +22,46 @@ function getAudio(file) {
         audioCache[file] = audio;
     }
 
-    return audio;
+    return audioCache[file];
+}
+
+
+/**
+ * Unlock audio trên mobile
+ *
+ * Gọi trong pointerdown / click
+ */
+function unlockAudio(file) {
+
+    const audio =
+        getAudio(file);
+
+    if (!audio) {
+        return;
+    }
+
+    audio.muted = true;
+
+    audio.currentTime = 0;
+
+    audio.play()
+        .then(() => {
+
+            audio.pause();
+
+            audio.currentTime = 0;
+
+            audio.muted = false;
+
+        })
+        .catch(error => {
+
+            console.log(
+                "Audio unlock error:",
+                error
+            );
+
+        });
 }
 
 
@@ -34,10 +69,6 @@ function getAudio(file) {
  * Phát âm thanh
  */
 function playSound(file) {
-
-    if (!file) {
-        return;
-    }
 
     const audio =
         getAudio(file);
@@ -50,62 +81,13 @@ function playSound(file) {
 
     audio.currentTime = 0;
 
+    audio.muted = false;
+
     audio.play()
         .catch(error => {
 
             console.log(
-                "Audio error:",
-                error
-            );
-
-        });
-}
-
-
-/**
- * Unlock audio trên mobile
- *
- * Phải được gọi trong một thao tác
- * của người dùng như pointerdown / click.
- */
-function unlockAudio(file) {
-
-    if (!file) {
-        return;
-    }
-
-    const audio =
-        getAudio(file);
-
-    if (!audio) {
-        return;
-    }
-
-    audio.volume = 0;
-
-    audio.currentTime = 0;
-
-    audio.play()
-        .then(() => {
-
-            audio.pause();
-
-            audio.currentTime = 0;
-
-            audio.volume = 1;
-
-            audioUnlocked = true;
-
-            console.log(
-                "Audio unlocked:",
-                file
-            );
-
-        })
-        .catch(error => {
-
-            console.log(
-                "Audio unlock error:",
+                "Audio play error:",
                 error
             );
 
