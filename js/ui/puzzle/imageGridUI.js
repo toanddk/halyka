@@ -182,11 +182,11 @@ function imageGridUI(
 
                 puzzleCompleted = true;
 
+                playSound(puzzle.audio);
+
                 const message = document.createElement("div");
 
                 message.className = "puzzle-complete-message";
-
-                playSound(puzzle.audio);
                 
                 message.textContent = "🎉 Hoàn thành!";
                 
