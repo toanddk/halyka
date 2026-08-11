@@ -135,7 +135,7 @@ function imageGridUI(
         // ====================================
         piece.addEventListener("pointerdown", function (event) {
             
-            unlockAudio(puzzle.audio);
+            //unlockAudio(puzzle.audio);
             if(puzzleCompleted){
                 return;
             }
