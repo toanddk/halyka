@@ -34,6 +34,34 @@ function playSound(file) {
         });
 }
 
+let audioUnlocked = false;
+
+
+function unlockAudio() {
+
+    if (audioUnlocked) {
+        return;
+    }
+
+    const audio =
+        new Audio("system/chinh-xac.mp3");
+
+    audio.volume = 0;
+
+    audio.play()
+        .then(() => {
+
+            audio.pause();
+            audio.currentTime = 0;
+
+            audioUnlocked = true;
+
+        })
+        .catch(() => {
+            // Mobile chưa cho phép audio
+        });
+}
+
 /*
 function playSound(file){
 
