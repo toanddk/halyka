@@ -39,7 +39,7 @@ const subjects = {
             ],
 
 
-            2: [null
+            2: [
 
                 {
                     id: "multiply",
