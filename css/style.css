@@ -114,6 +114,34 @@ button:active{
 
 }
 
+.level-back-button{
+    background-color: #E57373 !important;   /* đỏ pastel */
+    color: white !important;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.level-back-button:hover{
+    background-color: #42a5f5;
+}
+
+.lesson-back-button{
+    background-color: #E57373 !important;   /* đỏ pastel */
+    color: white !important;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.lesson-back-button:hover{
+    background-color: #42a5f5;
+}
+
 .nextButton {
     background-color: #81C784 !important;   /* xanh pastel */
     color: white !important;

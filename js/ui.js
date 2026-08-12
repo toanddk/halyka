@@ -32,11 +32,14 @@ function createButton(parentId, label, callback) {
             .appendChild(btn);
 }
 
-function createBackButton(parentId, callback){
+function createBackButton(parentId, callback,className){
 
     const btn = document.createElement("button");
 
     btn.textContent = "🔙 Quay lại";
+    if(className){
+        btn.classList.add(className);
+    }
 
     btn.onclick = callback;
 
@@ -132,7 +135,8 @@ function levelScreen() {
     createBackButton(
         //"levelList",
         "levelNavigation",
-        () => showTopScreen()
+        () => showTopScreen(),
+        "level-back-button"
     );
 
 }
@@ -184,7 +188,8 @@ function lessonScreen(lessons) {
 
     createBackButton(
         "lessonNavigation",
-        () => showLevelScreen()
+        () => showLevelScreen(),
+        "lesson-back-button"
     );
 
 }

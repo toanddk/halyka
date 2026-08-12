@@ -33,8 +33,7 @@ function getAudio(file) {
  */
 function unlockAudio(file) {
 
-    const audio =
-        getAudio(file);
+    const audio = getAudio(file);
 
     if (!audio) {
         return;

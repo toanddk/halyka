@@ -116,8 +116,7 @@ function finishPuzzle(container) {
     result.className =
         "puzzle-result";
 
-    result.innerHTML = `
-        <h2>🎉 Hoàn thành!</h2>
+    result.innerHTML = `<h2>🎉 Hoàn thành!</h2>
 
         <button id="puzzleRestartButton">
             🔄 Chơi lại

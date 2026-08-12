@@ -7,7 +7,9 @@ function renderActivity() {
     const lesson = getCurrentLesson();
 
     container.innerHTML= "";
-
+  
+    showMessage("");
+    
     switch (lesson.type) {
 
         case "quiz":
