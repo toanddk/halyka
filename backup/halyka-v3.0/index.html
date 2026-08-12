@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halyka</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animal.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================================================= -->
+    <!-- TopScreen -->
+    <!-- ================================================= -->
+    <div id="topScreen" class="screen">
+
+        <h1>🌈 Halyka</h1>
+        <h2>Khám phá cùng Halyka</h2>
+
+        <div id="subjectList">
+            <!-- JS tự tạo danh sách môn học -->
+        </div>
+
+        <p class="version">Version 3.0</p>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- SubjectScreen (Level) -->
+    <!-- ================================================= -->
+    <div id="levelScreen" class="screen" style="display:none;">
+
+        <h2 id="levelTitle"></h2>
+
+        <div id="levelList">
+            <!-- JS tự tạo Level -->
+        </div>
+
+        <div id="levelNavigation"></div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- LessonScreen -->
+    <!-- ================================================= -->
+    <div id="lessonScreen" class="screen" style="display:none;">
+
+        <h2 id="lessonTitle"></h2>
+
+        <div id="lessonList">
+            <!-- JS tự tạo bài học -->
+        </div>
+
+        <div id="lessonNavigation"></div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- ActivityScreen -->
+    <!-- ================================================= -->
+    <div id="activityScreen" class="screen" style="display:none;">
+
+        <h2 id="activityTitle"></h2>
+
+        <div id="quizProgress"></div>
+        
+        <div id="activityContainer"></div>
+
+        <!-- Thông báo đúng / sai -->
+        <div id="messageBox"></div>
+
+        <div id="activityControl">
+                   
+            <button id="exitButton" class="exitButton"> Thoat </button>
+        </div>
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- ResultScreen -->
+    <!-- ================================================= -->
+    <div id="resultScreen" class="screen" style="display:none;">
+
+        <h2>🎉 Hoàn thành</h2>
+
+        <h1 id="scoreText"></h1>
+
+        <button id="playAgainBtn">
+            🔄 Học lại
+        </button>
+
+        <button id="homeBtn">
+            🏠 Trang chủ
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= JS ================= -->
+
+<script src="js/data/subjects.js"></script>
+
+<script src="js/ui/quiz/quizCommon.js"></script>
+<script src="js/ui/quiz/imageTextUI.js"></script>
+<script src="js/ui/quiz/textTextUI.js"></script>
+<script src="js/ui/quizUI.js"></script>
+<script src="js/activity/quizActivity.js"></script>
+<script src="js/activity/renderActivity.js"></script>
+
+<script src="data/vietnamese/Colors/vietnameseColorsLevel1.js"></script>
+<script src="data/vietnamese/Alphabet/vietnameseAlphabetLevel1.js"></script>
+<script src="data/vietnamese/reading/vietnameseReadingLevel1.js"></script>
+<script src="data/vietnamese/animals/vietnameseAnimalsLevel1.js"></script>
+
+<script src="data/math/numbers/mathNumbersLevel1.js"></script>
+<script src="data/math/addition/mathAdditionLevel1.js"></script>
+<script src="data/math/subtraction/mathSubtractionLevel1.js"></script>
+
+<script src="js/ui/puzzle/puzzleCommon.js"></script>
+<script src="js/ui/puzzle/imageGridUI.js"></script>
+<script src="data/puzzle/puzzleLevel1.js"></script>
+<script src="data/puzzle/puzzleLevel2.js"></script>
+<script src="js/activity/puzzleActivity.js"></script>
+
+<script src="js/data/lessonData.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

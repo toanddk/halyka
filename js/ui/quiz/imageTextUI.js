@@ -70,16 +70,6 @@ function renderImageText(
     );
 
 
-    // ========================================
-    // NAVIGATION
-    // ========================================
-
-    createNavigation(
-        wrapper,
-        actions
-    );
-
-
     container.appendChild(
         wrapper
     );

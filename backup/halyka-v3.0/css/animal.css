@@ -1,0 +1,126 @@
+.animal-icon{
+
+    font-size:120px;
+
+    margin-top:20px;
+
+    margin-bottom:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.animal-icon {
+    width: 220px;
+    height: 220px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 15px auto 25px;
+}
+
+
+
+.image-answer-box {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+.answer-balloon {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Chỉ khi có đúng 3 đáp án */
+.image-answer-box:has(.answer-balloon:nth-child(3):last-child)
+.answer-balloon:nth-child(3) {
+
+    grid-column: 1 / 3;
+
+    width: 50%;
+
+    justify-self: center;
+}
+
+
+
+.answer-balloon{
+
+    width:80%;
+
+    max-width:300px;
+
+    padding:12px;
+
+    margin:12px;
+
+    background:#FFEB3B;
+    color: #333333;
+
+    border-radius:50px;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.15);
+
+
+    transition:.2s;
+
+}
+
+
+
+.answer-balloon:hover{
+
+    transform:
+        scale(1.08);
+
+}
+
+
+
+.answer-balloon:active{
+
+    transform:
+        scale(.95);
+
+}
+
+
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}

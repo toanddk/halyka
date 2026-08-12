@@ -75,6 +75,13 @@ const subjects = {
                },
 
                 {
+                    id: "reading",
+                    name: "📖 Tập đọc",
+                    type: "reading",
+                    datafile: "vietnamese/reading/vietnameseReadingLevel1.js" 
+               },
+
+                {
                     id: "colors",
                     name: "⚙ Màu sắc",
                     type: "quiz",

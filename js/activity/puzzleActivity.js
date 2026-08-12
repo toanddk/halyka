@@ -9,7 +9,6 @@ let puzzleData = null;
  */
 function puzzleActivity(container, lesson) {
 
-    // Lấy dữ liệu của lesson hiện tại
     const allPuzzles = getLessonData();
 
     if (!allPuzzles || allPuzzles.length === 0) {
@@ -18,11 +17,50 @@ function puzzleActivity(container, lesson) {
         return;
     }
 
-    // Lưu toàn bộ dữ liệu Puzzle
     puzzleData = allPuzzles;
 
-    // Bắt đầu từ Puzzle đầu tiên
     currentPuzzle = 0;
+
+
+    // =========================================
+    // Nút điều hướng chung
+    // =========================================
+
+    const prevButton =
+        document.getElementById("prevButton");
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+
+    prevButton.style.display =
+        "inline-block";
+
+    nextButton.style.display =
+        "inline-block";
+
+
+    // =========================================
+    // Quay lại
+    // =========================================
+
+    prevButton.onclick = () => {
+
+        previousPuzzle(container);
+
+    };
+
+
+    // =========================================
+    // Tiếp theo
+    // =========================================
+
+    nextButton.onclick = () => {
+
+        nextPuzzle(container);
+
+    };
+
 
     showPuzzle(container);
 }
@@ -73,14 +111,6 @@ function showPuzzle(container) {
 
         },
 
-        // Bấm "Câu tiếp theo"
-        // luôn cho phép chuyển
-        onNext: () => {
-
-            nextPuzzle(container);
-
-        },
-
         // Bấm "Làm lại"
         onRetry: () => {
 
@@ -102,6 +132,18 @@ function nextPuzzle(container) {
     showPuzzle(container);
 }
 
+
+function previousPuzzle(container) {
+
+    if (currentPuzzle > 0) {
+
+        currentPuzzle--;
+
+        showPuzzle(container);
+
+    }
+
+}
 
 /**
  * Kết thúc bài Puzzle

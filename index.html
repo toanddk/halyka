@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animal.css">
+    <link rel="stylesheet" href="css/reading.css">
 </head>
 
 <body>
@@ -63,25 +64,41 @@
     </div>
 
 
-    <!-- ================================================= -->
-    <!-- ActivityScreen -->
-    <!-- ================================================= -->
-    <div id="activityScreen" class="screen" style="display:none;">
+<!-- ================================================= -->
+<!-- ActivityScreen -->
+<!-- ================================================= -->
 
-        <h2 id="activityTitle"></h2>
+<div id="activityScreen" class="screen" style="display:none;">
 
-        <div id="quizProgress"></div>
-        
-        <div id="activityContainer"></div>
+    <h2 id="activityTitle"></h2>
 
-        <!-- Thông báo đúng / sai -->
-        <div id="messageBox"></div>
+    <div id="quizProgress"></div>
 
-        <div id="activityControl">
-                   
-            <button id="exitButton" class="exitButton"> Thoat </button>
-        </div>
+    <div id="activityContainer"></div>
+
+    <!-- Thông báo đúng / sai -->
+    <div id="messageBox"></div>
+    
+    <div id="activityControl">
+        <div id="activityNavigation">
+
+        <button id="prevButton">
+            ◀ Quay lại
+        </button>
+
+        <button id="nextButton">
+            Tiếp theo ▶
+        </button>
+
     </div>
+
+    <button id="exitButton" class="exitButton">
+        🚪 Thoát
+    </button>
+
+</div>
+
+</div>
 
 
     <!-- ================================================= -->
@@ -119,8 +136,12 @@
 
 <script src="data/vietnamese/Colors/vietnameseColorsLevel1.js"></script>
 <script src="data/vietnamese/Alphabet/vietnameseAlphabetLevel1.js"></script>
-<script src="data/vietnamese/reading/vietnameseReadingLevel1.js"></script>
 <script src="data/vietnamese/animals/vietnameseAnimalsLevel1.js"></script>
+
+<script src="data/vietnamese/reading/vietnameseReadingLevel1.js"></script>
+<script src="js/ui/readingUI.js"></script>
+<script src="js/activity/readingActivity.js"></script>
+
 
 <script src="data/math/numbers/mathNumbersLevel1.js"></script>
 <script src="data/math/addition/mathAdditionLevel1.js"></script>

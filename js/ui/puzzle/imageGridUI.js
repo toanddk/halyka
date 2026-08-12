@@ -24,11 +24,6 @@ function imageGridUI(
     grid.style.gridTemplateRows =
         `repeat(${puzzle.rows}, 1fr)`;
 
-    // tao navigation //
-    /*const navigation =
-    document.createElement("div");
-    navigation.className = "puzzle-navigation";
-    */
     // ========================================
     // TOTAL PIECES
     // ========================================
@@ -111,12 +106,7 @@ function imageGridUI(
         // ====================================
         // TEMPORARY NUMBER
         // ====================================
-        /*piece.textContent =
-            pieceIndex + 1;
-        */
-       /*if(puzzle.showNumber !== false){
-        piece.textContent = pieceIndex + 1;
-       }*/
+ 
       if(puzzle.showNumber !== false){
         const number = document.createElement("span");
         number.className = "puzzle-piece-number";
@@ -147,9 +137,6 @@ function imageGridUI(
                 );
                 piece.style.cursor =
                     "grabbing";
-                /*piece.setPointerCapture(
-                    event.pointerId
-                );*/
             }
         );
         // ====================================
@@ -288,18 +275,13 @@ navigation.className =
 // RETRY BUTTON
 // ========================================
 
-const retryButton =
-    document.createElement("button");
+const retryButton = document.createElement("button");
 
-retryButton.className =
-    "puzzle-retry-button";
+retryButton.className = "puzzle-retry-button";
 
-retryButton.textContent =
-    "🔄 Làm lại";
+retryButton.textContent = "🔄 Làm lại";
 
-retryButton.addEventListener(
-    "click",
-    function () {
+retryButton.addEventListener( "click", function () {
 
         if (actions?.onRetry) {
 
@@ -310,50 +292,16 @@ retryButton.addEventListener(
     }
 );
 
+//const navigation = document.getElementById("activityNavigation");
+//navigation.insertBefore("nextButton");
 
-// ========================================
-// NEXT BUTTON
-// ========================================
-
-const nextButton =
-    document.createElement("button");
-
-nextButton.className =
-    "puzzle-next-button";
-
-nextButton.textContent =
-    "▶ Câu tiếp theo";
-
-nextButton.addEventListener(
-    "click",
-    function () {
-
-        if (actions?.onNext) {
-
-            actions.onNext();
-
-        }
-
-    }
-);
-
-
-navigation.appendChild(
-    retryButton
-);
-
-navigation.appendChild(
-    nextButton
-);
-
+navigation.appendChild( retryButton);
 
 // ========================================
 // ADD NAVIGATION
 // ========================================
 
-wrapper.appendChild(
-    navigation
-);
+wrapper.appendChild(navigation);
 
 }
 // ============================================

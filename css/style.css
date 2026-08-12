@@ -357,3 +357,34 @@ button:active{
 
     z-index: 5;
 }
+
+#prevButton,
+#nextButton{
+    display: none;
+}
+
+#activityControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#activityNavigation button {
+    background-color: #edaf10;
+    color: white;
+
+    width: auto !important;
+    min-width: 130px;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}

@@ -20,8 +20,8 @@ function renderActivity() {
             puzzleActivity(container,lesson);
             break;
 
-        case "listening":
-            //ListeningActivity(container,lesson);
+        case "reading":
+            readingActivity(container,lesson);
             break;
         default: 
         console.error("chua co Activity:", lesson.type);

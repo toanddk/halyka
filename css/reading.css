@@ -1,0 +1,187 @@
+/* ================================================
+   Reading
+   ================================================ */
+
+
+/* =================================================
+   Tiêu đề
+   ================================================= */
+
+.reading-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* =================================================
+   Nội dung Reading
+   ================================================= */
+
+.reading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+
+/* =================================================
+   Bài 1 - Chữ cái
+   ================================================= */
+
+.reading-letter-grid {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+.reading-letter {
+
+    font-size: 48px;
+
+    font-weight: bold;
+
+    width: 70px !important;
+
+    min-width: 70px;
+
+    height: 65px;
+
+    min-height: 65px;
+
+    flex: 0 0 auto;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+}
+
+
+/* =================================================
+   Bài 2 - Ghép âm
+   ================================================= */
+
+.reading-row {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin: 8px 0;
+
+    white-space: nowrap;
+}
+
+
+
+/* =================================================
+   Icon
+   ================================================= */
+
+.reading-icon {
+    font-size: 42px;
+
+    width: 45px;
+    min-width: 45px;
+
+    text-align: center;
+
+    flex: 0 0 auto;
+}
+
+
+/* =================================================
+   Phần đánh vần
+   ================================================= */
+
+.reading-blend {
+    font-size: 30px;
+    font-weight: bold;
+
+    width: auto !important;
+    min-width: auto;
+
+    min-height: 60px;
+
+    padding: 8px 12px;
+
+    border-radius: 14px;
+
+    white-space: nowrap;
+
+    flex: 0 0 auto;
+}
+
+
+/* =================================================
+   Từ hoàn chỉnh
+   ================================================= */
+
+.reading-word {
+    font-size: 36px;
+    font-weight: bold;
+
+    width: auto !important;
+    min-width: 90px;
+
+    min-height: 60px;
+
+    padding: 8px 12px;
+
+    border-radius: 14px;
+
+    white-space: nowrap;
+
+    flex: 0 0 auto;
+}
+
+
+/* =================================================
+   Hiệu ứng khi chạm
+   ================================================= */
+
+.reading-letter:active,
+.reading-blend:active,
+.reading-word:active {
+
+    transform: scale(0.95);
+}
+#activityControl {
+    text-align: center;
+}
+
+#activityNavigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
