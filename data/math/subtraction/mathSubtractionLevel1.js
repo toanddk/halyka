@@ -263,7 +263,7 @@ const mathSubtractionLevel1 = [
     {
         ui: "text-text",
 
-        question: "3 - 0 = ?",
+        question: "9 - 6 = ?",
 
         answers: [
             {
@@ -332,7 +332,7 @@ const mathSubtractionLevel1 = [
         {
         ui: "text-text",
 
-        question: "9 - 6 = ?",
+        question: "8 - 5 = ?",
 
         answers: [
             {

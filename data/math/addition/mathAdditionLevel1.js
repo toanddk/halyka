@@ -74,7 +74,7 @@ const mathAdditionLevel1 = [
     {
         ui: "text-text",
 
-        question: "0 + ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ = ?",
+        question: "⚽ ⚽ ⚽ ⚽ ⚽ ⚽+ ⚽ = ?",
 
         answers: [
             {
