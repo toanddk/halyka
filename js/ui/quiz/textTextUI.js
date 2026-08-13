@@ -4,7 +4,8 @@
 function renderTextText(
     container,
     question,
-    actions
+    actions,
+    coin
 ) {
 
     const wrapper =
@@ -49,6 +50,7 @@ if (question.audio) {
 
     questionElement.textContent =
         question.question;
+        //question.coin;
 
     wrapper.appendChild(
         questionElement

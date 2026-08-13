@@ -346,7 +346,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/CH.mp3",
 
@@ -368,7 +368,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/G.mp3",
 
@@ -390,7 +390,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/GI.mp3",
 
@@ -412,7 +412,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/KH.mp3",
 
@@ -434,7 +434,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/NG.mp3",
 
@@ -456,7 +456,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/NG.mp3",
 
@@ -478,7 +478,7 @@ const vietnameseAlphabetLevel1 = [
 
         ui: "text-text",
 
-question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/NH.mp3",
 
@@ -500,7 +500,7 @@ question: "Chữ ghép nào bé vừa nghe?",
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/PH.mp3",
 
@@ -522,7 +522,7 @@ question: "Chữ ghép nào bé vừa nghe?",
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/QU.mp3",
 
@@ -544,7 +544,7 @@ question: "Chữ ghép nào bé vừa nghe?",
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/TH.mp3",
 
@@ -566,7 +566,7 @@ question: "Chữ ghép nào bé vừa nghe?",
 
         ui: "text-text",
 
-        question: "Chữ ghép nào bé vừa nghe?",
+        //question: "Chữ ghép nào bé vừa nghe?",
 
         audio: "vietnamese/alphabet/TR.mp3",
 

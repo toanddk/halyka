@@ -85,4 +85,31 @@ const puzzleLevel1 = [
         showNumber: true
     },
 
+    {
+        ui: "image-grid",
+        image: "assets/map/bando-vietnam.webp",
+        audio: "system/chinh-xac.mp3",
+        rows: 3,
+        cols: 3,
+        showNumber: true
+    },
+
+    {
+        ui: "image-grid",
+        image: "assets/map/bando-nhatban.webp",
+        audio: "system/chinh-xac.mp3",
+        rows: 3,
+        cols: 3,
+        showNumber: true
+    },
+
+    {
+        ui: "image-grid",
+        image: "assets/map/bando-thegioi.webp",
+        audio: "system/chinh-xac.mp3",
+        rows: 3,
+        cols: 3,
+        showNumber: true
+    }
+
 ];

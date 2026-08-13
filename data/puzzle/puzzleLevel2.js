@@ -70,4 +70,30 @@ const puzzleLevel2 = [
         showNumber: false
     },
 
+    {
+        ui: "image-grid",
+        image: "assets/map/bando-vietnam.webp",
+        audio: "system/chinh-xac.mp3",
+        rows: 4,
+        cols: 4,
+        showNumber: false
+    },
+
+    {
+        ui: "image-grid",
+        image: "assets/map/bando-nhatban.webp",
+        audio: "system/chinh-xac.mp3",
+        rows: 6,
+        cols: 4,
+        showNumber: false
+    },
+
+    {
+        ui: "image-grid",
+        image: "assets/map/bando-thegioi.webp",
+        audio: "system/chinh-xac.mp3",
+        rows: 5,
+        cols: 5,
+        showNumber: false
+    }
 ];

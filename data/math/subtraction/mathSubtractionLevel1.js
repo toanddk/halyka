@@ -194,7 +194,7 @@ const mathSubtractionLevel1 = [
     {
         ui: "text-text",
 
-        question: "🎈 🎈 🎈 🎈 🎈 - 🎈 = ?",
+        question: "🎈🎈🎈🎈🎈 - 🎈= ?",
 
         answers: [
             {

@@ -128,7 +128,7 @@ function imageGridUI(
             if(puzzleCompleted){
                 return;
             }
-            playSound("system/silent.mp3");
+            unlockAudio("system/silent.mp3");
             
                 event.preventDefault();
                 selectedPiece =
