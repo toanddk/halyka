@@ -125,10 +125,11 @@ function imageGridUI(
         // ====================================
         piece.addEventListener("pointerdown", function (event) {
             
-            playSound("system/silent.mp3");
             if(puzzleCompleted){
                 return;
             }
+            playSound("system/silent.mp3");
+            
                 event.preventDefault();
                 selectedPiece =
                     piece;

@@ -333,6 +333,55 @@ const vietnameseReadingLevel1 = [
         ]
     },
 */
+    {
+        id: "reading_2",
+
+        name: "Ghép âm",
+
+        items: [
+
+            {
+                icon: "👩",
+
+                blend: "m + ẹ →",
+
+                word: "mẹ",
+
+                blendAudio:
+                    "vietnamese/reading/m-e.mp3",
+
+                wordAudio:
+                    "vietnamese/reading/me.mp3"
+            },
+
+            {
+                icon: "👨",
+
+                blend: "b + ố →",
+
+                word: "bố",
+
+                blendAudio:
+                    "vietnamese/reading/b-o.mp3",wordAudio:
+                    "vietnamese/reading/bo.mp3"
+            },
+
+            {
+                icon: "",
+
+                blend: "ch + ị →",
+
+                word: "chị",
+
+                blendAudio:
+                    "vietnamese/reading/ch-i.mp3",
+
+                wordAudio:
+                    "vietnamese/reading/chi.mp3"
+            }
+
+        ]
+    },
 
     // =================================================
     // BÀI 2
@@ -340,7 +389,7 @@ const vietnameseReadingLevel1 = [
     // =================================================
 
     {
-        id: "reading_2",
+        id: "reading_3",
 
         name: "Ghép âm",
 
@@ -388,5 +437,7 @@ const vietnameseReadingLevel1 = [
 
         ]
     }
+
+
 
 ];
