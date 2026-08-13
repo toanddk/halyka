@@ -1,11 +1,11 @@
 // js/audio/audio.js
 
-const audioCache = {};
+//const audioCache = {};
 
 /**
  * Lấy Audio object
  */
-
+/*
 function getAudio(file) {
 
     if (!file) {
@@ -24,13 +24,13 @@ function getAudio(file) {
 
     return audioCache[file];
 }
-
+*/
 /**
  * Unlock audio trên mobile
  *
  * Gọi trong pointerdown / click
  */
-
+/*
 function unlockAudio(file) {
 
     const audio = getAudio(file);
@@ -63,11 +63,11 @@ function unlockAudio(file) {
         });
 }
 
-
+*/
 /**
  * Phát âm thanh
  */
-
+/*
 function playSound(file) {
 
     const audio =
@@ -93,8 +93,8 @@ function playSound(file) {
 
         });
 }
+*/
 
-/*
 function playSound(file){
 
     if(!file){
@@ -118,4 +118,4 @@ function playSound(file){
 
         });
 
-}*/
+}
