@@ -67,36 +67,38 @@
 <!-- ================================================= -->
 <!-- ActivityScreen -->
 <!-- ================================================= -->
-
 <div id="activityScreen" class="screen" style="display:none;">
+
+    <div id="activityControl">
+        <button id="exitButton" class="exitButton">
+            🚪 Thoát
+        </button>
+    </div>
 
     <h2 id="activityTitle"></h2>
 
     <div id="quizProgress"></div>
 
-    <div id="activityContainer"></div>
+    <!-- Vùng bài học + navigation -->
+    <div id="activityArea">
 
-    <!-- Thông báo đúng / sai -->
-    <div id="messageBox"></div>
-    
-    <div id="activityControl">
+        <div id="activityContainer"></div>
+
         <div id="activityNavigation">
 
-        <button id="prevButton">
-            ◀ Quay lại
-        </button>
+            <button id="prevButton">
+                ◀ Quay lại
+            </button>
 
-        <button id="nextButton">
-            Tiếp theo ▶
-        </button>
+            <button id="nextButton">
+                Tiếp theo ▶
+            </button>
+
+        </div>
 
     </div>
 
-    <button id="exitButton" class="exitButton">
-        🚪 Thoát
-    </button>
-
-</div>
+    <div id="messageBox"></div>
 
 </div>
 
@@ -104,6 +106,7 @@
     <!-- ================================================= -->
     <!-- ResultScreen -->
     <!-- ================================================= -->
+</div>
     <div id="resultScreen" class="screen" style="display:none;">
 
         <h2>🎉 Hoàn thành</h2>

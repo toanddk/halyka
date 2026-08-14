@@ -84,12 +84,12 @@
 
 .reading-row {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
     flex-direction: row;
 
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
+    gap: 12px;
 
     width: 100%;
 
@@ -105,14 +105,14 @@
    ================================================= */
 
 .reading-icon {
+    width: 45px;
+    flex-shrink: 0;
     font-size: 42px;
 
-    width: 45px;
     min-width: 45px;
+    text-align: left;
 
-    text-align: center;
-
-    flex: 0 0 auto;
+/*    flex: 0 0 auto;*/
 }
 
 
@@ -121,6 +121,8 @@
    ================================================= */
 
 .reading-blend {
+    margin-left: 15px;
+
     font-size: 30px;
     font-weight: bold;
 

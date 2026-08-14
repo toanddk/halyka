@@ -142,37 +142,10 @@ button:active{
     background-color: #42a5f5;
 }
 
-.nextButton {
-    background-color: #81C784 !important;   /* xanh pastel */
-    color: white !important;
-    border: none;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.exitButton {
-    background-color: #E57373 !important;   /* đỏ pastel */
-    color: white !important;
-    border: none;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
 .nextButton:hover {
     background-color: #A5D6A7 !important;
     transform: scale(1.05);
 }
-
-.exitButton:hover {
-    background-color: #EF9A9A !important;
-    transform: scale(1.05);
-}
-
-
 
 .tryread-box {
     background: #fff;
@@ -242,10 +215,10 @@ button:active{
 }
 
 .quiz-question {
-    font-size: 39px;
+    font-size: 22px;
     font-weight: bold;
     margin: 15px 0 25px;
-    line-height: 1.4;
+    line-height: 1.05;
 }
 
 .question-icon {
@@ -358,28 +331,76 @@ button:active{
     z-index: 5;
 }
 
-#prevButton,
-#nextButton{
-    display: none;
-}
+/* ================================================
+   EXIT BUTTON
+   ================================================ */
 
 #activityControl {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    width: 100%;
+    text-align: left !important;
 }
 
-#activityNavigation button {
-    background-color: #edaf10;
+.exitButton {
+    width: auto !important;
+    display: inline-block;
+    margin: 0;
+    padding: 6px 12px;
+    background-color: #EF5350;
     color: white;
 
+    border: none;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+.exitButton:hover {
+    background-color: #E57373;
+    transform: scale(1.03);
+}
+
+#activityArea {
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* ================================================
+   Activity Navigation
+   ================================================ */
+
+#activityNavigation {
+    display: flex !important;
+
+    width: 100% !important;
+
+    justify-content: space-between !important;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+#activityNavigation button {
     width: auto !important;
     min-width: 130px;
+    min-height: 44px;
+
+    margin: 0;
 
     padding: 12px 20px;
 
+/*    background-color: #90A4AE;
+    color: blue;
+*/
     border: none;
     border-radius: 12px;
 
@@ -387,4 +408,45 @@ button:active{
     font-weight: bold;
 
     cursor: pointer;
+}
+
+
+#activityNavigation button:hover {
+    background-color: #64B5F6;
+    transform: scale(1.05);
+}
+
+
+#activityNavigation button:active {
+    background-color: #F57C00;
+    transform: scale(0.95);
+}
+
+#prevButton,
+#nextButton{
+    display: none;
+}
+
+/* ================================================
+   Quay lại
+   ================================================ */
+
+#nextButton,#prevButton {
+    min-width: 120px;
+    min-height: 44px;
+
+    padding: 10px 16px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    border-radius: 12px;
+}
+#nextButton {
+    background-color: #FFB74D;
+    color: #333333;
+}
+#prevButton {
+    background-color: #90A4AE;
+    color:#FFFFFF;
 }
