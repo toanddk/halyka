@@ -8,9 +8,9 @@ const vietnameseColorsLevel1 = [
         question: "🔴 Đây là màu gì?",
         //icon: "🔴",
         answers: [
-            { text: "Đỏ", sound: "system/chinh-xac.mp3" },
-            { text: "Vàng", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Xanh", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Đỏ" },
+            { text: "Vàng"},
+            { text: "Xanh"}
         ],
         correct: 0
     },
@@ -19,9 +19,9 @@ const vietnameseColorsLevel1 = [
         question: "🟡 Đây là màu gì?",
         //icon: "🟡",
         answers: [
-            { text: "Xanh", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Vàng", sound: "system/chinh-xac.mp3" },
-            { text: "Đỏ", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Xanh"},
+            { text: "Vàng" },
+            { text: "Đỏ" }
         ],
         correct: 1
     },
@@ -30,9 +30,9 @@ const vietnameseColorsLevel1 = [
         question: "🔵 Đây là màu gì?",
         //icon: "🔵",
         answers: [
-            { text: "Đỏ", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Xanh", sound: "system/chinh-xac.mp3" },
-            { text: "Vàng", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Đỏ" },
+            { text: "Xanh" },
+            { text: "Vàng" }
         ],
         correct: 1
     },
@@ -41,9 +41,9 @@ const vietnameseColorsLevel1 = [
         question: "🟢 Đây là màu gì?",
         //icon: "🟢",
         answers: [
-            { text: "Xanh lá", sound: "system/chinh-xac.mp3" },
-            { text: "Đỏ", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Vàng", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Xanh lá" },
+            { text: "Đỏ" },
+            { text: "Vàng" }
         ],
         correct: 0
     },
@@ -52,9 +52,9 @@ const vietnameseColorsLevel1 = [
         question: "🟠 Đây là màu gì?",
         //icon: "🟠",
         answers: [
-            { text: "Tím", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Cam", sound: "system/chinh-xac.mp3" },
-            { text: "Đỏ", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Tím" },
+            { text: "Cam" },
+            { text: "Đỏ" }
         ],
         correct: 1
     },
@@ -63,9 +63,9 @@ const vietnameseColorsLevel1 = [
         question: "🟣 Đây là màu gì?",
         //icon: "🟣",
         answers: [
-            { text: "Cam", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Tím", sound: "system/chinh-xac.mp3" },
-            { text: "Xanh", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Cam" },
+            { text: "Tím" },
+            { text: "Xanh" }
         ],
         correct: 1
     },
@@ -74,9 +74,9 @@ const vietnameseColorsLevel1 = [
         question: "🩷 Đây là màu gì?",
         //icon: "🩷",
         answers: [
-            { text: "Hồng", sound: "system/chinh-xac.mp3" },
-            { text: "Đỏ", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Tím", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Hồng" },
+            { text: "Đỏ" },
+            { text: "Tím" }
         ],
         correct: 0
     },
@@ -85,9 +85,9 @@ const vietnameseColorsLevel1 = [
         question: "🟤 Đây là màu gì?",
         //icon: "🟤",
         answers: [
-            { text: "Cam", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Nâu", sound: "system/chinh-xac.mp3" },
-            { text: "Đen", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Cam" },
+            { text: "Nâu" },
+            { text: "Đen" }
         ],
         correct: 1
     },
@@ -96,8 +96,9 @@ const vietnameseColorsLevel1 = [
         question: "⚫ Đây là màu gì?",
         //icon: "⚫",
         answers: [
-            { text: "Đen", sound: "system/chinh-xac.mp3" },{ text: "Trắng", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Nâu", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Đen" },
+            { text: "Trắng" },
+            { text: "Nâu" }
         ],
         correct: 0
     },
@@ -106,9 +107,9 @@ const vietnameseColorsLevel1 = [
         question: "⚪ Đây là màu gì?",
         //icon: "⚪",
         answers: [
-            { text: "Đen", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Trắng", sound: "system/chinh-xac.mp3" },
-            { text: "Xám", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Đen" },
+            { text: "Trắng" },
+            { text: "Xám" }
         ],
         correct: 1
     },
@@ -120,9 +121,9 @@ const vietnameseColorsLevel1 = [
         //question: "Màu đỏ ở đâu?",
         audio: "vietnamese/colors/mau-do-o-dau.mp3",
         answers: [
-            { text: "🔴 Đỏ", sound: "system/chinh-xac.mp3" },
-            { text: "🟡 Vàng", sound: "system/thu-lai-nhe.mp3" },
-            { text: "🔵 Xanh", sound: "system/thu-lai-nhe.mp3" }
+            { text: "🔴 Đỏ" },
+            { text: "🟡 Vàng" },
+            { text: "🔵 Xanh" }
         ],
         correct: 0
     },
@@ -131,9 +132,9 @@ const vietnameseColorsLevel1 = [
         //question: "Màu vàng ở đâu?",
         audio: "vietnamese/colors/mau-vang-o-dau.mp3",
         answers: [
-            { text: "🔵 Xanh", sound: "system/thu-lai-nhe.mp3" },
-            { text: "🟡 Vàng", sound: "system/chinh-xac.mp3" },
-            { text: "🔴 Đỏ", sound: "system/thu-lai-nhe.mp3" }
+            { text: "🔵 Xanh" },
+            { text: "🟡 Vàng" },
+            { text: "🔴 Đỏ" }
         ],
         correct: 1
     },
@@ -142,9 +143,9 @@ const vietnameseColorsLevel1 = [
         //question: "Màu xanh ở đâu?",
         audio: "vietnamese/colors/mau-xanh-o-dau.mp3",
         answers: [
-            { text: "🟢 Xanh", sound: "system/chinh-xac.mp3" },
-            { text: "🔴 Đỏ", sound: "system/thu-lai-nhe.mp3" },
-            { text: "🟡 Vàng", sound: "system/thu-lai-nhe.mp3" }
+            { text: "🟢 Xanh" },
+            { text: "🔴 Đỏ" },
+            { text: "🟡 Vàng" }
         ],
         correct: 0
     },
@@ -153,9 +154,9 @@ const vietnameseColorsLevel1 = [
         //question: "Màu cam ở đâu?",
         audio: "vietnamese/colors/mau-cam-o-dau.mp3",
         answers: [
-            { text: "🟣 Tím", sound: "system/thu-lai-nhe.mp3" },
-            { text: "🟠 Cam", sound: "system/chinh-xac.mp3" },
-            { text: "🟢 Xanh", sound: "system/thu-lai-nhe.mp3" }
+            { text: "🟣 Tím" },
+            { text: "🟠 Cam" },
+            { text: "🟢 Xanh" }
         ],
         correct: 1
     },
@@ -164,9 +165,9 @@ const vietnameseColorsLevel1 = [
         //question: "Màu tím ở đâu?",
         audio: "vietnamese/colors/mau-tim-o-dau.mp3",
         answers: [
-            { text: "🟠 Cam", sound: "system/thu-lai-nhe.mp3" },
-            { text: "🟣 Tím", sound: "system/chinh-xac.mp3" },
-            { text: "🩷 Hồng", sound: "system/thu-lai-nhe.mp3" }
+            { text: "🟠 Cam" },
+            { text: "🟣 Tím" },
+            { text: "🩷 Hồng" }
         ],
         correct: 1
     },
@@ -175,9 +176,9 @@ const vietnameseColorsLevel1 = [
         //question: "Màu hồng ở đâu?",
         audio: "vietnamese/colors/mau-hong-o-dau.mp3",
         answers: [
-            { text: "🔴 Đỏ", sound: "system/thu-lai-nhe.mp3" },
-            { text: "🩷 Hồng", sound: "system/chinh-xac.mp3" },
-            { text: "🟣 Tím", sound: "system/thu-lai-nhe.mp3" }
+            { text: "🔴 Đỏ" },
+            { text: "🩷 Hồng" },
+            { text: "🟣 Tím" }
         ],
         correct: 1
     },
@@ -188,9 +189,9 @@ const vietnameseColorsLevel1 = [
         question: "🍎 Màu gì đây ?",
         //icon: "🍎",
         answers: [
-            { text: "Đỏ", sound: "system/chinh-xac.mp3" },
-            { text: "Xanh dương", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Tím", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Đỏ" },
+            { text: "Xanh dương" },
+            { text: "Tím" }
         ],
         correct: 0
     },
@@ -199,9 +200,9 @@ const vietnameseColorsLevel1 = [
         question: "🍌 Màu gì đây ?",
         //icon: "🍌",
         answers: [
-            { text: "Vàng", sound: "system/chinh-xac.mp3" },
-            { text: "Đỏ", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Xanh dương", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Vàng" },
+            { text: "Đỏ" },
+            { text: "Xanh dương" }
         ],
         correct: 0
     },
@@ -210,9 +211,9 @@ const vietnameseColorsLevel1 = [
         question: "🥦 Bông cải này màu gì?",
         //icon: "🥦",
         answers: [
-            { text: "Xanh lá", sound: "system/chinh-xac.mp3" },
-            { text: "Vàng", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Tím", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Xanh lá" },
+            { text: "Vàng" },
+            { text: "Tím" }
         ],
         correct: 0
     },
@@ -221,9 +222,9 @@ const vietnameseColorsLevel1 = [
         question: "🥕 cà rốt có màu gì?",
         //icon: "🥕",
         answers: [
-            { text: "Cam", sound: "system/chinh-xac.mp3" },
-            { text: "Xanh", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Tím", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Cam" },
+            { text: "Xanh" },
+            { text: "Tím" }
         ],
         correct: 0
     },
@@ -232,9 +233,9 @@ const vietnameseColorsLevel1 = [
         question: "🍇 Quả nho này màu gì?",
         //icon: "🍇",
         answers: [
-            { text: "Tím", sound: "system/chinh-xac.mp3" },
-            { text: "Vàng", sound: "system/thu-lai-nhe.mp3" },
-            { text: "Cam", sound: "system/thu-lai-nhe.mp3" }
+            { text: "Tím" },
+            { text: "Vàng" },
+            { text: "Cam" }
         ],
         correct: 0
     }

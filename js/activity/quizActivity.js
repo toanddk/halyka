@@ -7,7 +7,9 @@ let currentQuestion = 0;
 let score = 0;
 let quizData = null;
 let answered = false;
-let answeredQuestions = [];
+let answerResults = [];
+let selectedAnswers = [];
+//let answeredQuestions = [];
 
 
 /**
@@ -28,7 +30,7 @@ function quizActivity(container, lesson) {
     currentQuestion = 0;
     score = 0;
 
-    answeredQuestions = [];
+    answerResults = [];
 
 
     // =========================================
@@ -149,7 +151,8 @@ function showQuestion(container) {
         question,
 
         {
-            onAnswer: checkAnswer
+            onAnswer: checkAnswer,
+            selectedAnswers: selectedAnswers[currentQuestion]
         }
 
     );
@@ -167,31 +170,16 @@ function checkAnswer(answerIndex) {
 
     const isCorrect =
         answerIndex === question.correct;
+    
+    selectedAnswers[currentQuestion] = answerIndex;
 
-    // =========================
-    // ĐÚNG
-    // =========================
+    // Luôn cập nhật theo lựa chọn mới nhất
+    answerResults[currentQuestion] =
+        isCorrect;
 
-    if (isCorrect) {
-
-        // Chỉ tính điểm lần đầu trả lời đúng
-        if (!answeredQuestions[currentQuestion]) {
-
-            score++;
-
-            answeredQuestions[currentQuestion] = true;
-        }
-
-        return true;
-    }
-
-    // =========================
-    // SAI
-    // =========================
-
-    return false;
+    // Trả về để phát âm thanh
+    return isCorrect;
 }
-
 
 /**
  * Sang câu tiếp theo
@@ -239,8 +227,13 @@ function previousQuestion(container) {
  */
 function finishQuiz(container) {
 
-    container.innerHTML = "";
+    
 
+    score = answerResults.filter(
+        result => result === true
+    ).length;
+
+    container.innerHTML = "";
 
     const result =
         document.createElement("div");
