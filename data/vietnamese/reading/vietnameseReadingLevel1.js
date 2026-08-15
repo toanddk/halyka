@@ -46,7 +46,7 @@ const vietnameseReadingLevel1 = [
 
                 blend: "ch + ị →",
 
-                word: "bố",
+                word: "chị",
 
                 blendAudio:
                     "vietnamese/reading/ch-i.mp3",
@@ -166,6 +166,21 @@ const vietnameseReadingLevel1 = [
                 wordAudio:
                     "vietnamese/reading/nha.mp3"
             },
+            
+            {
+
+                icon: "🗼",
+
+                blend: "th + áp →",
+
+                word: "tháp",
+
+                blendAudio:
+                    "vietnamese/reading/th-ap.mp3",
+
+                wordAudio:
+                    "vietnamese/reading/thap.mp3"
+            },
 
             {
                 icon: "🚙",
@@ -235,6 +250,20 @@ const vietnameseReadingLevel1 = [
                 
                 wordAudio:
                     "vietnamese/reading/chim.mp3"
+            },
+
+            {
+                icon: "🧎‍➡️",
+
+                blend: "ng + ồi →",
+
+                word: "ngồi",
+
+                blendAudio:
+                    "vietnamese/reading/ng-oi.mp3",
+                
+                wordAudio:
+                    "vietnamese/reading/ngoi.mp3"
             },
 
             {
