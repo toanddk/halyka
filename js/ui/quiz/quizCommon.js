@@ -66,33 +66,30 @@ function createAnswers(
              * Click answer
              * ==============================*/
 
-            button.addEventListener(
-                "click",
-                () => {
+            button.addEventListener("click", () => {
 
-                    /* Phát sound của answer */
+            // Kiểm tra đáp án
+            const isCorrect = actions.onAnswer(index);
 
-                    if (
-                        typeof answer === "object" &&
-                        answer.sound
-                    ) {
+            // Nếu đáp án có audio
+            if ( typeof answer === "object" && answer.sound ) {
 
-                        playSound(
-                            answer.sound
-                        );
+                const answerAudio =
+                playSound(answer.sound);
 
-                    }
+                // Chờ audio đáp án phát xong
+                answerAudio.addEventListener("ended", () => {
 
+                playResultSound(isCorrect);
+            },
 
-                    /* Gửi index về quizActivity */
-
-                    actions.onAnswer(
-                        index
-                    );
-
-                }
-            );
-
+            { once: true }
+                );
+            } else {
+             // Không có audio đáp án
+                playResultSound(isCorrect);
+             }
+            });
 
             answerContainer.appendChild(
                 button
@@ -103,4 +100,22 @@ function createAnswers(
 
 
     return answerContainer;
+}
+
+function playResultSound(isCorrect) {
+
+    if (isCorrect) {
+
+        playSound(
+            "system/chinh-xac.mp3"
+        );
+
+    } else {
+
+        playSound(
+            "system/thu-lai-nhe.mp3"
+        );
+
+    }
+
 }

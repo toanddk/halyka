@@ -163,47 +163,37 @@ function showQuestion(container) {
 function checkAnswer(answerIndex) {
 
     if (answered) {
-
         return;
-
     }
 
-
     answered = true;
-
 
     const question =
         quizData[currentQuestion];// Không cộng điểm lần 2
 
     if (answeredQuestions[currentQuestion]) {
-
         return;
-
     }
 
-
-    answeredQuestions[currentQuestion] =
-        true;
-
-
-    if (
-        answerIndex ===
-        question.correct
-    ) {
-
+    answeredQuestions[currentQuestion] = true;
+    if (answerIndex === question.correct ) {
         score++;
+        return true;
 
-        showMessage(
+    /*    showMessage(
             "🎉 Đúng rồi!"
         );
+    */
+    } 
 
-    } else {
-
+    return false;
+    /*else {
+        playSound("system/thu-lai-nhe.mp3");
         showMessage(
             "😊 Chưa đúng!"
         );
-
-    }
+    
+    }*/
 
 }
 

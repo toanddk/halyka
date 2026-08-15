@@ -83,7 +83,7 @@ const subjects = {
 
                 {
                     id: "colors",
-                    name: "⚙ Màu sắc",
+                    name: "🌈 Màu sắc",
                     type: "quiz",
                     datafile: "vietnamese/Colors/vietnameseColorsLevel1.js" 
                },

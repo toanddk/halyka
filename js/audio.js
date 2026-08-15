@@ -94,7 +94,7 @@ function playSound(file) {
         });
 }
 */
-
+/*
 function playSound(file){
 
     if(!file){
@@ -118,4 +118,21 @@ function playSound(file){
 
         });
 
+}*/
+function playSound(file) {
+
+    const audio =
+        new Audio(
+            "assets/audio/" + file
+        );
+
+    audio.play().catch(error => {
+        console.warn(
+            "Không thể phát audio:",
+            file,
+            error
+        );
+    });
+
+    return audio;
 }

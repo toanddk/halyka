@@ -24,8 +24,6 @@
     margin: 15px auto 25px;
 }
 
-
-
 .image-answer-box {
     display: grid;
 
@@ -35,14 +33,6 @@
 
     width: 100%;
 }
-
-
-.answer-balloon {
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 
 /* Chỉ khi có đúng 3 đáp án */
 .image-answer-box:has(.answer-balloon:nth-child(3):last-child)
@@ -55,17 +45,19 @@
     justify-self: center;
 }
 
-
-
 .answer-balloon{
 
-    width:80%;
+    width: 100%;
 
     max-width:300px;
 
     padding:12px;
 
-    margin:12px;
+    margin:0;
+    
+    white-space: nowrap;
+
+    box-sizing: border-box;
 
     background:#FFEB3B;
     color: #333333;
@@ -79,48 +71,36 @@
     cursor:pointer;
 
     box-shadow:
-        0 5px 10px rgba(0,0,0,.15);
-
-
+    0 5px 10px rgba(0,0,0,.15);
     transition:.2s;
-
 }
-
-
 
 .answer-balloon:hover{
-
-    transform:
-        scale(1.08);
-
+    transform: scale(1.08);
 }
-
-
 
 .answer-balloon:active{
-
-    transform:
-        scale(.95);
-
+    transform: scale(.95);
 }
-
-
 
 @keyframes bounce{
 
     0%,100%{
-
         transform:
             translateY(0);
-
     }
 
-
     50%{
-
         transform:
-            translateY(-10px);
+        translateY(-10px);
+    }
+}
 
+@media (max-width: 480px) {
+
+    .answer-balloon {
+        font-size: 21px;
+        padding: 10px 6px;
     }
 
 }

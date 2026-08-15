@@ -147,47 +147,6 @@ button:active{
     transform: scale(1.05);
 }
 
-.tryread-box {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #ccc;
-    font-size: 28px;
-    line-height: 1.8;
-}
-
-.read-line {
-    font-size: 32px;
-    padding: 14px 20px;
-    margin: 12px 0;
-    background: #FDF6E3;
-    border-radius: 14px;
-    border: 2px solid #E0DCC8;
-    text-align: center;
-    cursor: pointer;
-    white-space: normal;
-    word-wrap: break-word;
-    line-height: 1.3;
-}
-
-.tryread-box {
-    max-height: 60vh;
-    overflow-y: auto;
-}
-
-
-.read-line:hover {
-    background: #e6fff3;        /* xanh nhạt khi chạm */
-    border-color: #A7C8FF;
-}
-
-.read-line:active {
-    transform: scale(0.97);
-    background: #D9E9FF;
-}
-
 .screen {
     padding-top: 20px;
 }

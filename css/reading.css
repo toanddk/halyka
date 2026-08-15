@@ -44,7 +44,7 @@
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     width: 100%;
 
@@ -187,3 +187,29 @@
     width: 100%;
 }
 
+@media (max-width: 480px) {
+
+    .reading-row {
+        gap: 6px;
+    }
+
+    .reading-icon {
+        width: 38px;
+        min-width: 38px;
+        font-size: 34px;
+    }
+
+    .reading-blend {
+        margin-left: 4px;
+        font-size: 24px;
+        min-height: 50px;
+        padding: 6px 6px;
+    }
+
+    .reading-word {
+        font-size: 28px;
+        min-width: 70px;
+        min-height: 50px;
+        padding: 6px 6px;
+    }
+}
