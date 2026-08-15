@@ -162,39 +162,34 @@ function showQuestion(container) {
  */
 function checkAnswer(answerIndex) {
 
-    if (answered) {
-        return;
-    }
-
-    answered = true;
-
     const question =
-        quizData[currentQuestion];// Không cộng điểm lần 2
+        quizData[currentQuestion];
 
-    if (answeredQuestions[currentQuestion]) {
-        return;
+    const isCorrect =
+        answerIndex === question.correct;
+
+    // =========================
+    // ĐÚNG
+    // =========================
+
+    if (isCorrect) {
+
+        // Chỉ tính điểm lần đầu trả lời đúng
+        if (!answeredQuestions[currentQuestion]) {
+
+            score++;
+
+            answeredQuestions[currentQuestion] = true;
+        }
+
+        return true;
     }
 
-    answeredQuestions[currentQuestion] = true;
-    if (answerIndex === question.correct ) {
-        score++;
-        return true;
-
-    /*    showMessage(
-            "🎉 Đúng rồi!"
-        );
-    */
-    } 
+    // =========================
+    // SAI
+    // =========================
 
     return false;
-    /*else {
-        playSound("system/thu-lai-nhe.mp3");
-        showMessage(
-            "😊 Chưa đúng!"
-        );
-    
-    }*/
-
 }
 
 
