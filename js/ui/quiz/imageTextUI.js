@@ -57,11 +57,11 @@ function renderImageText(
             question,
             actions,
             {
-                containerClass:
-                    "image-answer-box",
+                containerClass: "image-answer-box",
 
-                buttonClass:
-                    "answer-balloon"
+                buttonClass: "answer-balloon",
+                
+                selectedAnswer: actions.selectedAnswer
             }
         );
 

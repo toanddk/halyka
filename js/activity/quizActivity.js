@@ -29,7 +29,7 @@ function quizActivity(container, lesson) {
 
     currentQuestion = 0;
     score = 0;
-
+    selectedAnswers = [];
     answerResults = [];
 
 
@@ -136,23 +136,26 @@ function showQuestion(container) {
     // Câu hỏi hiện tại
     // =========================================
 
-    const question =
-        quizData[currentQuestion];
+    const question = quizData[currentQuestion];
 
+    console.log(
+        "ACTION OBJECT =",
+        {
+            onAnswer: checkAnswer,
+            selectedAnswer:
+            selectedAnswers[currentQuestion]
+        });
 
     // =========================================
     // Render Quiz
     // =========================================
 
     renderQuizUI(
-
         container,
-
         question,
-
         {
             onAnswer: checkAnswer,
-            selectedAnswers: selectedAnswers[currentQuestion]
+            selectedAnswer: selectedAnswers[currentQuestion]
         }
 
     );
@@ -171,11 +174,11 @@ function checkAnswer(answerIndex) {
     const isCorrect =
         answerIndex === question.correct;
     
+    // lưu đáp án cuối cùng
     selectedAnswers[currentQuestion] = answerIndex;
 
     // Luôn cập nhật theo lựa chọn mới nhất
-    answerResults[currentQuestion] =
-        isCorrect;
+    answerResults[currentQuestion] = isCorrect;
 
     // Trả về để phát âm thanh
     return isCorrect;
@@ -229,9 +232,7 @@ function finishQuiz(container) {
 
     
 
-    score = answerResults.filter(
-        result => result === true
-    ).length;
+    score = answerResults.filter(result => result === true ).length;
 
     container.innerHTML = "";
 

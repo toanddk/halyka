@@ -2,7 +2,7 @@
 
 
 function renderQuizUI(container, question, actions) {
-
+console.log("quizui selected:", actions.selectedAnswer);
     container.innerHTML = "";
 
     switch (question.ui) {

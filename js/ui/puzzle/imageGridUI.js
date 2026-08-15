@@ -4,7 +4,8 @@ function imageGridUI(
     puzzle,
     actions
 ) {
-    let puzzleCompleted = false;
+    let puzzleCompleted =
+    actions?.savedState?.completed === true;
     // ========================================
     // PUZZLE CONTAINER
     // ========================================
@@ -41,11 +42,27 @@ function imageGridUI(
         pieces.push(i);
     }
     // ========================================
-    // SHUFFLE
+    // RESTORE / SHUFFLE
     // ========================================
+
+    if (
+        actions?.savedState &&
+        Array.isArray(actions.savedState.order) &&
+        actions.savedState.order.length === totalPieces
+    ) {
+
+    // Có trạng thái cũ → khôi phục
+    pieces =
+        [...actions.savedState.order];
+
+    } else {
+
+    // Chưa có trạng thái → shuffle
     pieces.sort(
         () => Math.random() - 0.5
     );
+
+    }
     // ========================================
     // CREATE PIECES
     // ========================================
@@ -175,6 +192,19 @@ function imageGridUI(
                 targetPiece
             );
 
+            if (actions?.onStateChange) {
+
+                const state =
+                getPuzzleState(
+                    grid,
+                    puzzleCompleted
+                    );
+
+            actions.onStateChange(
+                state
+                );
+            }
+
             if (!puzzleCompleted && checkPuzzleComplete(grid)) {
 
                 puzzleCompleted = true;
@@ -191,8 +221,15 @@ function imageGridUI(
 
             if (actions?.onComplete) {
 
-                actions.onComplete();
+                const state =
+                getPuzzleState(
+                    grid,
+                    true
+                    );
 
+            actions.onComplete(
+                state
+                );
             }
 
 }
@@ -309,6 +346,27 @@ wrapper.appendChild(navigation);
 // SELECTED PIECE
 // ============================================
 let selectedPiece = null;
+
+function getPuzzleState(grid, completed) {
+
+    const pieces =
+        grid.querySelectorAll(
+            ".puzzle-piece"
+        );
+
+    const order =
+        Array.from(pieces).map(
+            piece =>
+                Number(
+                    piece.dataset.correctIndex
+                )
+        );
+
+    return {
+        order: order,
+        completed: completed
+    };
+}
 // ============================================
 // SWAP PIECES
 // ============================================

@@ -60,16 +60,18 @@ if (question.audio) {
     // ========================================
     // ANSWERS
     // ========================================
-
+    console.log("text-textUI:",actions.selectedAnswer);
     const answers =
         createAnswers(
             question,
-            actions
+            actions,
+            {
+                selectedAnswer: actions.selectedAnswer
+            }
+            
         );
 
-    wrapper.appendChild(
-        answers
-    );
+    wrapper.appendChild(answers );
 
     // ========================================
     // ADD TO CONTAINER

@@ -28,22 +28,21 @@ function createAnswers(
 
     // Class mặc định
     answerContainer.className =
-        options.containerClass ||
-        "quiz-answers";
+        options.containerClass || "quiz-answers";
+   
+    // đáp án đã chọn trước đó
+    const selectedAnswer = options.selectedAnswer;
+    console.log("createAnswer selected:",selectedAnswer);
 
 
-    question.answers.forEach(
-        (answer, index) => {
+    question.answers.forEach((answer, index) => {
 
-            const button =
-                document.createElement("button");
-
+            const button = document.createElement("button");
 
             // Class mặc định
-            button.className =
-                options.buttonClass ||
-                "quiz-answer";
+            button.className =  options.buttonClass || "quiz-answer";
 
+                console.log("button class:", button.className);
 
             /* ==============================
              * Nội dung đáp án
@@ -51,14 +50,21 @@ function createAnswers(
 
             if (typeof answer === "string") {
 
-                button.textContent =
-                    answer;
+                button.textContent = answer;
 
             } else {
 
-                button.textContent =
-                    answer.text;
+                button.textContent = answer.text;
 
+            }
+
+            // =================================
+            // Đánh dấu đáp án đã chọn cuối cùng
+            // =================================
+
+            if (index === selectedAnswer) {
+
+                button.classList.add("selected");
             }
 
 
@@ -67,6 +73,15 @@ function createAnswers(
              * ==============================*/
 
             button.addEventListener("click", () => {
+                // xóa trạng thái cũ
+                answerContainer
+                    .querySelectorAll(".selected")
+                    .forEach(btn =>{
+                        btn.classList.remove("selected");
+                    });
+                // đánh dấu đáp án cũ
+                    button.classList.add("selected");
+
 
             // Kiểm tra đáp án
             const isCorrect = actions.onAnswer(index);
@@ -83,17 +98,15 @@ function createAnswers(
                 playResultSound(isCorrect);
             },
 
-            { once: true }
-                );
+            { once: true } );
             } else {
              // Không có audio đáp án
                 playResultSound(isCorrect);
-             }
+             } 
             });
 
-            answerContainer.appendChild(
-                button
-            );
+            answerContainer.appendChild( button );
+            
 
         }
     );

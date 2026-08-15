@@ -2,6 +2,7 @@
 
 let currentPuzzle = 0;
 let puzzleData = null;
+let puzzleStates = [];
 
 
 /**
@@ -104,21 +105,34 @@ function showPuzzle(container) {
     container,
     puzzle,
     {
-        // Puzzle được ghép đúng
-        onComplete: () => {
+        savedState:
+            puzzleStates[currentPuzzle],
+
+        onComplete: (state) => {
 
             puzzle.completed = true;
 
+            puzzleStates[currentPuzzle] =
+                state;
         },
 
-        // Bấm "Làm lại"
+        onStateChange: (state) => {
+
+            puzzleStates[currentPuzzle] =
+                state;
+        },
+
         onRetry: () => {
 
-            showPuzzle(container);
+            puzzleStates[currentPuzzle] =
+                null;
 
+            puzzle.completed = false;
+
+            showPuzzle(container);
         }
     }
-);
+    );
 }
 
 
