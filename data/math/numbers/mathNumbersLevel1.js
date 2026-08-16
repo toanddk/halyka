@@ -11,9 +11,9 @@ const mathNumbersLevel1 = [
     },
     {
         ui: "text-text",
-        question: "⭐ ⭐ ⭐ ⭐",
+        question: "⭐ ⭐ ⭐ ⭐ ⭐",
         answers: ["3", "4", "5"],
-        correct: 1
+        correct: 2
     },
     {
         ui: "text-text",
@@ -23,15 +23,15 @@ const mathNumbersLevel1 = [
     },
     {
         ui: "text-text",
-        question: "🍌 🍌 🍌 🍌 🍌",
+        question: "🍌 🍌 🍌 🍌",
         answers: ["4", "5", "6"],
-        correct: 1
+        correct: 0
     },
     {
         ui: "text-text",
-        question: "⚽ ⚽ ⚽ ⚽ ⚽ ⚽",
+        question: "⚽ ⚽ ⚽ ⚽ ⚽",
         answers: ["5", "6", "7"],
-        correct: 1
+        correct: 0
     },
     {
         ui: "text-text",
@@ -41,9 +41,9 @@ const mathNumbersLevel1 = [
     },
     {
         ui: "text-text",
-        question: "🌸🌸🌸🌸🌸🌸🌸",
+        question: "🌸🌸🌸🌸🌸🌸",
         answers: ["6", "7", "8"],
-        correct: 1
+        correct: 0
     },
     {
         ui: "text-text",
@@ -59,9 +59,9 @@ const mathNumbersLevel1 = [
     },
     {
         ui: "text-text",
-        question: "🟡 🟡 🟡 🟡 🟡 🟡",
+        question: "🟡 🟡 🟡 🟡 🟡",
         answers: ["5", "6", "7"],
-        correct: 1
+        correct: 0
     },
     {
         ui: "text-text",
@@ -71,9 +71,9 @@ const mathNumbersLevel1 = [
     },
     {
         ui: "text-text",
-        question: "🚗🚗🚗🚗🚗🚗🚗🚗🚗",
+        question: "🚗🚗🚗🚗🚗🚗🚗🚗",
         answers: ["8", "9", "10"],
-        correct: 1
+        correct: 0
     }
     
 ];
