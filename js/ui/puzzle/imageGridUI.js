@@ -6,6 +6,7 @@ function imageGridUI(
 ) {
     let puzzleCompleted =
     actions?.savedState?.completed === true;
+    console.log("puzzle:", puzzle.image, "savedstate:", actions?.savedState);
     // ========================================
     // PUZZLE CONTAINER
     // ========================================

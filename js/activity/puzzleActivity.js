@@ -22,6 +22,9 @@ function puzzleActivity(container, lesson) {
 
     currentPuzzle = 0;
 
+    // Mỗi level/lesson có state riêng
+    puzzleStates = [];
+
 
     // =========================================
     // Nút điều hướng chung
@@ -110,7 +113,7 @@ function showPuzzle(container) {
 
         onComplete: (state) => {
 
-            puzzle.completed = true;
+            //puzzle.completed = true;
 
             puzzleStates[currentPuzzle] =
                 state;
@@ -127,7 +130,7 @@ function showPuzzle(container) {
             puzzleStates[currentPuzzle] =
                 null;
 
-            puzzle.completed = false;
+            //puzzle.completed = false;
 
             showPuzzle(container);
         }
